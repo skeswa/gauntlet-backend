@@ -15,5 +15,7 @@
 	org.gauntlet.core.model;version=latest,\
 	org.gauntlet.core.api;version=latest,\
 	org.gauntlet.core.impl.dao;version=latest,\
-	org.amdatu.web.rest.wink;version=3.0
+	org.amdatu.web.rest.wink;version=3.0,\
+	org.gauntlet.core.commons;version=latest,\
+	org.gauntlet.core.impl.service;version=latest
 -sub: *.bnd
