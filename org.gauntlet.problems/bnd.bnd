@@ -17,5 +17,7 @@
 	org.gauntlet.core.impl.dao;version=latest,\
 	org.amdatu.web.rest.wink;version=3.0,\
 	org.gauntlet.core.commons;version=latest,\
-	org.gauntlet.core.impl.service;version=latest
+	org.gauntlet.core.impl.service;version=latest,\
+	org.amdatu.multitenant,\
+	org.amdatu.multitenant.adapter;version=1.0
 -sub: *.bnd
