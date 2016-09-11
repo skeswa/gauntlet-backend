@@ -3,6 +3,7 @@ package org.gauntlet.core.service.impl;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import javax.persistence.EntityManager;
@@ -26,6 +27,43 @@ public abstract class BaseServiceImpl implements IBaseService {
 	public abstract LogService getLogger();
 	
 	public abstract EntityManager getEm();
+	
+	@SuppressWarnings("rawtypes")
+	public List findWithDynamicQueryAndParams(CriteriaQuery dynamicQuery, Map<ParameterExpression,Object> paramMap, int start, int end)
+		throws ApplicationException {
+		List resultList = null;
+		try {
+			TypedQuery typedQuery = getEm().createQuery(dynamicQuery);
+			for (ParameterExpression pe : paramMap.keySet()) {
+				typedQuery.setParameter(pe, paramMap.get(pe));
+			}
+			typedQuery.setFirstResult(start);
+			typedQuery.setMaxResults(end-start);
+			resultList = typedQuery.getResultList();
+				
+		}
+		catch (Exception e) {
+			throw processException(e);
+		}
+		return resultList;
+	}	
+	
+	@SuppressWarnings("rawtypes")
+	public int countWithDynamicQueryAndParams(CriteriaQuery dynamicQuery, Map<ParameterExpression,Object> paramMap)
+		throws ApplicationException {
+		int res = 0;
+		try {
+			TypedQuery typedQuery = getEm().createQuery(dynamicQuery);
+			for (ParameterExpression pe : paramMap.keySet()) {
+				typedQuery.setParameter(pe, paramMap.get(pe));
+			}
+			res = typedQuery.getResultList().size();
+		}
+		catch (Exception e) {
+			throw processException(e);
+		}
+		return res;
+	}		
 	
 	public long countWithDynamicQuery(final CriteriaQuery<? extends JPABaseEntity> dynamicQuery)
 		throws ApplicationException {

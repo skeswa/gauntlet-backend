@@ -14,5 +14,6 @@
 	org.amdatu.persistence2_0;version=1.0,\
 	org.gauntlet.core.model;version=latest,\
 	org.gauntlet.core.api;version=latest,\
-	org.gauntlet.core.impl.dao;version=latest
+	org.gauntlet.core.impl.dao;version=latest,\
+	org.amdatu.web.rest.wink;version=3.0
 -sub: *.bnd
