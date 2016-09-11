@@ -1,0 +1,3 @@
+Export-Package: \
+	org.gauntlet.problems.api.model,\
+	org.gauntlet.problems.api.dao
