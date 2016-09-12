@@ -26,6 +26,8 @@ public class JPAEntityUtil {
 	
 	public static <T> T copy(Object src, Class<T> tgtClass)  {
 		T tgt = null;
+		if (src == null)
+			return null;
 		try {		
 			//tgt = tgtClass.newInstance();
 			tgt = mapper.map(src, tgtClass);

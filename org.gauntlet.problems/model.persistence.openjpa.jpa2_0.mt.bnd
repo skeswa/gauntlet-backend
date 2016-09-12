@@ -1,7 +1,7 @@
 Bundle-Version: 1.0.0.${tstamp}
 Gnt-Module: gnt_problem
-Meta-Persistence: META-INF/problems-persistence-openjpa.xml
-Include-Resource: META-INF/=resources/jpa
+Meta-Persistence: META-INF/persistence.xml
+Include-Resource: META-INF/persistence.xml=resources/jpa/problems-persistence-openjpa.xml
 Private-Package: org.gauntlet.problems.model.jpa.osgi
 X-MultiTenant-Version: 1
 X-MultiTenant-Bundle-Activator: org.gauntlet.problems.model.jpa.osgi.MTActivator

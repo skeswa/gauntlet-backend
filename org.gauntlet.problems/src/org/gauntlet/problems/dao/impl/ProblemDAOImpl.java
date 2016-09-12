@@ -370,7 +370,5 @@ public class ProblemDAOImpl extends BaseServiceImpl implements IProblemDAOServic
 
 	@Override
 	public void createDefaults() throws ApplicationException {
-		// TODO Auto-generated method stub
-		
 	}	
 }

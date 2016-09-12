@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<repository increment="1473614746000" name="Release" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+<repository increment="1473629921000" name="Release" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="org.conxworks.library.postgresql-datasourcefactory.osgi"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201606161915"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="f5b76eca069949ae9583a2ccfa1249c93141b793480f3aa7281314ffba31bd86"/>
+      <attribute name="url" value="org.conxworks.library.postgresql-datasourcefactory.osgi/org.conxworks.library.postgresql-datasourcefactory.osgi-1.0.0.jar"/>
+      <attribute name="size" type="Long" value="16014"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="org.conxworks.library.postgresql-datasourcefactory.osgi"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201606161915"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="org.conxworks.library.postgresql-datasourcefactory.osgi"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201606161915"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.sql)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.jdbc)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.postgresql)(version&gt;=9.4.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.postgresql.ds)(version&gt;=9.4.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.postgresql.xa)(version&gt;=9.4.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.5))"/>
+    </requirement>
+  </resource>
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="org.gauntlet.core.api"/>

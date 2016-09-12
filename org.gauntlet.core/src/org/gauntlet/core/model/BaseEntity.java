@@ -25,13 +25,13 @@ public abstract class BaseEntity extends SuperEntity
     protected boolean temporary = true;
     protected String processId;
     
-    protected int version;
-    protected boolean issystem;
+    protected Long version;
+    protected Boolean issystem;
     protected Date dateCreated = new Date();
     protected Date dateLastUpdated = new Date();
-    protected long ownerEntityId;
-    protected long ownerEntityTypeId;
-    protected boolean active = true;
+    protected Long ownerEntityId;
+    protected Long ownerEntityTypeId;
+    protected Boolean active = true;
     protected String externalName;
     protected String externalCode;
     protected String externalRefId;
@@ -78,7 +78,7 @@ public abstract class BaseEntity extends SuperEntity
      * Gets the value of the version property.
      * 
      */
-    public int getVersion() {
+    public Long getVersion() {
         return version;
     }
 
@@ -86,7 +86,7 @@ public abstract class BaseEntity extends SuperEntity
      * Sets the value of the version property.
      * 
      */
-    public void setVersion(int value) {
+    public void setVersion(Long value) {
         this.version = value;
     }
     
@@ -111,7 +111,7 @@ public abstract class BaseEntity extends SuperEntity
      * Gets the value of the issystem property.
      * 
      */
-    public boolean isIssystem() {
+    public Boolean isIssystem() {
         return issystem;
     }
 
@@ -119,7 +119,7 @@ public abstract class BaseEntity extends SuperEntity
      * Sets the value of the issystem property.
      * 
      */
-    public void setIssystem(boolean value) {
+    public void setIssystem(Boolean value) {
         this.issystem = value;
     }
 
@@ -175,7 +175,7 @@ public abstract class BaseEntity extends SuperEntity
      * Gets the value of the ownerEntityId property.
      * 
      */
-    public long getOwnerEntityId() {
+    public Long getOwnerEntityId() {
         return ownerEntityId;
     }
 
@@ -183,7 +183,7 @@ public abstract class BaseEntity extends SuperEntity
      * Sets the value of the ownerEntityId property.
      * 
      */
-    public void setOwnerEntityId(long value) {
+    public void setOwnerEntityId(Long value) {
         this.ownerEntityId = value;
     }
 
@@ -191,7 +191,7 @@ public abstract class BaseEntity extends SuperEntity
      * Gets the value of the ownerEntityTypeId property.
      * 
      */
-    public long getOwnerEntityTypeId() {
+    public Long getOwnerEntityTypeId() {
         return ownerEntityTypeId;
     }
 
@@ -199,7 +199,7 @@ public abstract class BaseEntity extends SuperEntity
      * Sets the value of the ownerEntityTypeId property.
      * 
      */
-    public void setOwnerEntityTypeId(long value) {
+    public void setOwnerEntityTypeId(Long value) {
         this.ownerEntityTypeId = value;
     }
 
@@ -207,7 +207,7 @@ public abstract class BaseEntity extends SuperEntity
      * Gets the value of the active property.
      * 
      */
-    public boolean isActive() {
+    public Boolean isActive() {
         return active;
     }
 
@@ -215,7 +215,7 @@ public abstract class BaseEntity extends SuperEntity
      * Sets the value of the active property.
      * 
      */
-    public void setActive(boolean value) {
+    public void setActive(Boolean value) {
         this.active = value;
     }
 

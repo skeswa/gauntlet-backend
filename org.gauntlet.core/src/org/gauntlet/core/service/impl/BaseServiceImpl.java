@@ -335,7 +335,8 @@ public abstract class BaseServiceImpl implements IBaseService {
 	public JPABaseEntity add(JPABaseEntity model) throws ApplicationException {
 		//model.setId(null);
 		//model.setVersion(null);
-		getEm().persist(model);
+		//getEm().persist(model);
+		getEm().merge(model);
 		//getEm().refresh(model);
 		
 		return model;
