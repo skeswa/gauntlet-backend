@@ -14,8 +14,7 @@ public class JPAEntityUtil {
 		final List<T> tgtList = new ArrayList<T>();
 		try {
 			for (Object src : srcList) {
-				tgt = tgtClass.newInstance();
-				BeanPropertyCopyUtil.copyProperties(src, tgt);
+				tgt = copy(src, tgtClass);
 				tgtList.add(tgt);
 			}
 		} catch (Exception e) {

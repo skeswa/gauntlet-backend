@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import org.gauntlet.core.model.BaseEntity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class Problem extends BaseEntity implements Serializable {
 	private String answer;
 	
@@ -17,9 +19,9 @@ public class Problem extends BaseEntity implements Serializable {
 
 	private ProblemDifficulty difficulty;
 
-	private byte[] answerPicture;
+	private ProblemPicture answerPicture;
 	
-	private byte[] questionPicture;
+	private ProblemPicture questionPicture;
 	
 	private boolean multipleChoice = true;
 	
@@ -73,19 +75,19 @@ public class Problem extends BaseEntity implements Serializable {
 		this.difficulty = difficulty;
 	}
 
-	public byte[] getAnswerPicture() {
+	public ProblemPicture getAnswerPicture() {
 		return answerPicture;
 	}
 
-	public void setAnswerPicture(byte[] answerPicture) {
+	public void setAnswerPicture(ProblemPicture answerPicture) {
 		this.answerPicture = answerPicture;
 	}
 
-	public byte[] getQuestionPicture() {
+	public ProblemPicture getQuestionPicture() {
 		return questionPicture;
 	}
 
-	public void setQuestionPicture(byte[] questionPicture) {
+	public void setQuestionPicture(ProblemPicture questionPicture) {
 		this.questionPicture = questionPicture;
 	}
 
@@ -104,9 +106,12 @@ public class Problem extends BaseEntity implements Serializable {
 	public void setRequiresCalculator(boolean requiresCalculator) {
 		this.requiresCalculator = requiresCalculator;
 	}
+	
+	public Problem() {
+	}
 
 	public Problem(String answer, ProblemSource source, ProblemCategory category, Integer sourcePageNumber,
-			Integer sourceIndexWithinPage, ProblemDifficulty difficulty, byte[] answerPicture, byte[] questionPicture,
+			Integer sourceIndexWithinPage, ProblemDifficulty difficulty, ProblemPicture answerPicture, ProblemPicture questionPicture,
 			boolean multipleChoice, boolean requiresCalculator) {
 		super();
 		this.answer = answer;
@@ -119,5 +124,7 @@ public class Problem extends BaseEntity implements Serializable {
 		this.questionPicture = questionPicture;
 		this.multipleChoice = multipleChoice;
 		this.requiresCalculator = requiresCalculator;
+		
+		this.code = source.getCode()+"_"+sourcePageNumber+"_"+sourceIndexWithinPage;
 	} 
 }

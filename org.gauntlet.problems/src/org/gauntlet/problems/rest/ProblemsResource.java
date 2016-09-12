@@ -4,8 +4,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.FormParam;
@@ -14,13 +19,22 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItem;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.commons.io.IOUtils;
 import org.gauntlet.core.api.ApplicationException;
 import org.gauntlet.core.api.dao.NoSuchModelException;
 import org.gauntlet.problems.api.dao.IProblemDAOService;
 import org.gauntlet.problems.api.model.Problem;
 import org.gauntlet.problems.api.model.ProblemCategory;
 import org.gauntlet.problems.api.model.ProblemDifficulty;
+import org.gauntlet.problems.api.model.ProblemPicture;
 import org.gauntlet.problems.api.model.ProblemSource;
 import org.osgi.service.log.LogService;
 
@@ -66,39 +80,106 @@ public class ProblemsResource {
 		problemService.delete(problemId);
 	}
 	
-	
+    
     @POST 
     @Path("/provide") 
-    @Consumes("multipart/form-data") 
+    @Consumes(MediaType.MULTIPART_FORM_DATA) 
     @Produces(MediaType.APPLICATION_JSON) 
-    public Problem save(@FormParam("answer") String answer,
-    					@FormParam("sourcePageNumber") Integer sourcePageNumber,
-    					@FormParam("sourceIndexWithinPage") Integer sourceIndexWithinPage,
-    					@FormParam("multipleChoice") Boolean multipleChoice,
-    					@FormParam("requiresCalculator") Boolean requiresCalculator,
-    					@FormParam("sourceId") Long sourceId,
-    					@FormParam("categoryId") Long categoryId,
-    					@FormParam("difficultyId") Long difficultyId,
-    					@FormParam("answerPicture") File answerPicture,
-    					@FormParam("questionPicture") File questionPicture) throws IOException, ApplicationException { 
- 
-    	
-    	Problem newProblem = new Problem(
-    					answer,
-    					null,//source, 
-    					null,//category, 
-    					sourcePageNumber,
-    					sourceIndexWithinPage, 
-    					null,//ProblemDifficulty difficulty, 
-    					readImageOldWay(answerPicture),//byte[] answerPicture, 
-    					readImageOldWay(questionPicture),//byte[] questionPicture,
-    					multipleChoice,
-    					requiresCalculator);
-    	
-    	newProblem = problemService.provide(newProblem);
+    public Problem provide(@Context HttpServletRequest request) throws IOException, ApplicationException { 
+    	Problem newProblem = null;
+    			
+    	String answer = null;
+		Integer sourcePageNumber = null;
+		Integer sourceIndexWithinPage = null;
+		Boolean multipleChoice = null;
+		Boolean requiresCalculator = null;
+		Long sourceId = null;
+		Long categoryId = null;
+		Long difficultyId = null;
+		ProblemPicture answerPicture = null;
+		ProblemPicture questionPicture = null;
+		
+		Map<String,FileItem> map = new HashMap<>();
+        ServletFileUpload uploader = new ServletFileUpload(new DiskFileItemFactory());
+        try {
+            List<FileItem> parseRequest = uploader.parseRequest(request);
+            for (FileItem fileItem : parseRequest) {
+                if (fileItem.isFormField() || fileItem instanceof DiskFileItem) {
+                	String fieldName = fileItem.getFieldName();
+                	map.put(fieldName, fileItem);
+                }
+
+            }
+            answer = map.get("answer").getString();
+            sourcePageNumber = Integer.valueOf(map.get("sourcePageNumber").getString());
+            sourceIndexWithinPage = Integer.valueOf(map.get("sourceIndexWithinPage").getString());
+            multipleChoice = Boolean.valueOf(map.get("sourceIndexWithinPage").getString());
+            requiresCalculator = Boolean.valueOf(map.get("requiresCalculator").getString());
+            sourceId = Long.valueOf(map.get("sourceId").getString());
+            categoryId = Long.valueOf(map.get("categoryId").getString());
+            difficultyId = Long.valueOf(map.get("difficultyId").getString());
+            
+            answerPicture = convertFileItemtoProblemPicture((DiskFileItem) map.get("answerPicture"));
+            questionPicture = convertFileItemtoProblemPicture((DiskFileItem) map.get("questionPicture"));
+            
+            ProblemSource ps = problemService.getProblemSourceByPrimary(sourceId);
+            ProblemCategory pc = problemService.getProblemCategoryByPrimary(categoryId);
+            ProblemDifficulty pd = problemService.getProblemDifficultyByPrimary(difficultyId);
+            
+            
+        	newProblem = new Problem(
+					answer,
+					ps,//source, 
+					pc,//category, 
+					sourcePageNumber,
+					sourceIndexWithinPage, 
+					pd,//ProblemDifficulty difficulty, 
+					answerPicture,//byte[] answerPicture, 
+					questionPicture,//byte[] questionPicture,
+					multipleChoice,
+					requiresCalculator);
+	
+			newProblem = problemService.provide(newProblem);
+        } catch (FileUploadException e) {
+            throw new ApplicationException(e);
+        } catch (NoSuchModelException e) {
+        	throw new ApplicationException(e);
+		} catch (Exception e) {
+        	throw new ApplicationException(e);
+		}
     	
         return newProblem; 
-    } 	
+    }     
+    
+    private ProblemPicture convertFileItemtoProblemPicture(DiskFileItem fi) throws Exception {
+    	byte[] content = null;
+    	ProblemPicture pp = null;
+		try {
+			if (fi.isInMemory()) {
+				InputStream is = null;
+				try {
+					is = fi.getInputStream();
+					content = IOUtils.toByteArray(is);
+				} finally {
+					if (is != null)
+						is.close();
+				}
+			} else {
+				File file = File.createTempFile(fi.getFieldName(), "tmp");
+				fi.write(file);
+				file.deleteOnExit();
+
+				content = Files.readAllBytes(Paths.get(file.getAbsolutePath()));
+			}
+			String ct = fi.getContentType();
+			long cs = fi.getSize();
+			String fileName = ((FileItem) fi).getName();
+			pp = new ProblemPicture(fileName, fileName, content, ct, cs);
+		} finally {
+			((FileItem) fi).delete();
+		}
+		return pp;
+    }
     
     public byte[] readImageOldWay(File file) throws IOException
     {

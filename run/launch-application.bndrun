@@ -100,4 +100,5 @@
   felix.log.level=4,\
   org.ops4j.pax.logging.DefaultServiceLog.level=WARN,\
   org.osgi.service.http.port=8080,\
-  felix.fileinstall.dir=load
+  felix.fileinstall.dir=load,\
+  org.apache.felix.http.jetty.maxFormSize=1000000000

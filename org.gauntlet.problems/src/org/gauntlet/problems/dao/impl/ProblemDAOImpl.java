@@ -206,14 +206,14 @@ public class ProblemDAOImpl extends BaseServiceImpl implements IProblemDAOServic
 		ProblemDifficulty existingCountry = getProblemDifficultyByCode(record.getCode());
 		if (Validator.isNull(existingCountry))
 		{
-			JPABaseEntity res = super.add(JPAEntityUtil.copy(record, JPAProblemCategory.class));
+			JPABaseEntity res = super.add(JPAEntityUtil.copy(record, JPAProblemDifficulty.class));
 			existingCountry = JPAEntityUtil.copy(res, ProblemDifficulty.class);
 		}
 
 		return existingCountry;	
 	}
 	
-	public ProblemDifficulty updateProblemDifficulty(JPAProblemCategory record) throws ApplicationException {
+	public ProblemDifficulty updateProblemDifficulty(JPAProblemDifficulty record) throws ApplicationException {
 		JPABaseEntity res = super.update(JPAEntityUtil.copy(record, JPAProblemDifficulty.class));
 		ProblemDifficulty dto = JPAEntityUtil.copy(res, ProblemDifficulty.class);
 		return dto;	
