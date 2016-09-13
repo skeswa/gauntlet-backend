@@ -23,10 +23,12 @@ import org.gauntlet.problems.api.dao.IProblemDAOService;
 import org.gauntlet.problems.api.model.Problem;
 import org.gauntlet.problems.api.model.ProblemCategory;
 import org.gauntlet.problems.api.model.ProblemDifficulty;
+import org.gauntlet.problems.api.model.ProblemPicture;
 import org.gauntlet.problems.api.model.ProblemSource;
 import org.gauntlet.problems.model.jpa.JPAProblem;
 import org.gauntlet.problems.model.jpa.JPAProblemCategory;
 import org.gauntlet.problems.model.jpa.JPAProblemDifficulty;
+import org.gauntlet.problems.model.jpa.JPAProblemPicture;
 import org.gauntlet.problems.model.jpa.JPAProblemSource;
 
 
@@ -367,8 +369,17 @@ public class ProblemDAOImpl extends BaseServiceImpl implements IProblemDAOServic
 		super.remove(jpaEntity);
 		return JPAEntityUtil.copy(jpaEntity, ProblemSource.class);
 	}
-
+	
+	
+	//Problem Picture
+	@Override
+	public ProblemPicture getProblemPictureByPrimary(Long pk) throws ApplicationException, NoSuchModelException {
+		JPAProblemPicture jpaEntity = (JPAProblemPicture) super.findByPrimaryKey(JPAProblemPicture.class, pk);
+		return JPAEntityUtil.copy(jpaEntity, ProblemPicture.class);
+	}	
+	
 	@Override
 	public void createDefaults() throws ApplicationException {
-	}	
+	}
+
 }

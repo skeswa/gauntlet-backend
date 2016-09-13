@@ -1,5 +1,6 @@
 package org.gauntlet.problems.rest;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -21,6 +22,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
@@ -82,7 +84,7 @@ public class ProblemsResource {
 	
     
     @POST 
-    @Path("/provide") 
+    @Path("provide") 
     @Consumes(MediaType.MULTIPART_FORM_DATA) 
     @Produces(MediaType.APPLICATION_JSON) 
     public Problem provide(@Context HttpServletRequest request) throws IOException, ApplicationException { 
@@ -325,5 +327,25 @@ public class ProblemsResource {
 	@Path("sources/{problemSourceId}")
 	public void deleteProbleSource(@PathParam("problemSourceId") long problemSourceId) throws NoSuchModelException, ApplicationException {
 		problemService.deleteProblemSource(problemSourceId);
-	}		
+	}	
+	
+	
+	@GET
+	@Path("pictures/{pictureId}")
+	public Response getImage(@PathParam("pictureId") String pictureId) throws ApplicationException
+	{
+		ProblemPicture pp;
+		try {
+			pp = problemService.getProblemPictureByPrimary(Long.valueOf(pictureId));
+			InputStream pictureStream = new ByteArrayInputStream(pp.getPicture());
+			MediaType mediaType = new MediaType("image", "png");
+
+		      return Response.ok()
+		                     .type(mediaType)
+		                     .entity(pictureStream)
+		                     .build();
+		} catch (NumberFormatException | ApplicationException | NoSuchModelException e) {
+			throw new ApplicationException(e);
+		}
+	}
 }

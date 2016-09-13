@@ -8,6 +8,7 @@ import org.gauntlet.core.api.service.IBaseService;
 import org.gauntlet.problems.api.model.Problem;
 import org.gauntlet.problems.api.model.ProblemCategory;
 import org.gauntlet.problems.api.model.ProblemDifficulty;
+import org.gauntlet.problems.api.model.ProblemPicture;
 import org.gauntlet.problems.api.model.ProblemSource;
 
 public interface IProblemDAOService extends IBaseService {
@@ -75,5 +76,10 @@ public interface IProblemDAOService extends IBaseService {
 	
 	public ProblemSource getProblemSourceByName(String name) throws ApplicationException;
 	
-	public ProblemSource deleteProblemSource(Long id) throws ApplicationException, NoSuchModelException;		
+	public ProblemSource deleteProblemSource(Long id) throws ApplicationException, NoSuchModelException;	
+	
+	
+	//Problem Picture
+	public ProblemPicture getProblemPictureByPrimary(Long pk)  throws ApplicationException, NoSuchModelException;
+	
 }

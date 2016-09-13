@@ -33,7 +33,7 @@ public interface IQuizDAOService extends IBaseService {
 	//QuizType
 	public List<QuizType> findAllQuizTypes(int start, int end) throws ApplicationException;
 	
-	public long countAllProblemCategories() throws ApplicationException;
+	public long countAllQuizTypes() throws ApplicationException;
 	
 	public QuizType getQuizTypeByPrimary(Long pk)  throws ApplicationException, NoSuchModelException;
 	

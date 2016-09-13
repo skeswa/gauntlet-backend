@@ -44,13 +44,13 @@ public class QuizResource {
     @GET 
     @Path("{quizId}") 
     @Produces(MediaType.APPLICATION_JSON) 
-    public Quiz getProblem(@PathParam("quizId") long quizId) throws NoSuchModelException, ApplicationException {
+    public Quiz getQuiz(@PathParam("quizId") long quizId) throws NoSuchModelException, ApplicationException {
 		return quizService.getByPrimary(quizId);
     }
     
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
-	public void updateProblem(Quiz quiz) throws ApplicationException {
+	public void updateQuiz(Quiz quiz) throws ApplicationException {
 		quizService.update(quiz);
 	}
 
@@ -62,16 +62,19 @@ public class QuizResource {
 	
     
     @POST 
-    @Path("/provide") 
+    @Path("provide") 
     @Consumes(MediaType.APPLICATION_JSON) 
     @Produces(MediaType.APPLICATION_JSON) 
-    public Quiz provide(Quiz quiz) throws IOException, ApplicationException { 
+    public Quiz provide(Quiz quiz) throws IOException, ApplicationException, NoSuchModelException { 
+    	Long typeId = quiz.getQuizType().getId();
+    	QuizType qt = quizService.getQuizTypeByPrimary(typeId);
+    	quiz.setQuizType(qt);
     	return quizService.provide(quiz);
     }     
 
 	/**
 	 * 
-	 * ========= Problem cats
+	 * ========= Quiz cats
 	 */
 	@GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -84,20 +87,20 @@ public class QuizResource {
     @Produces(MediaType.APPLICATION_JSON)
 	@Path("quiztypes/count")
     public long countCategories() throws ApplicationException {
-		return quizService.countAllProblemCategories();
+		return quizService.countAllQuizTypes();
     }	
 	
     @GET 
     @Path("quiztypes/{quizTypeId}") 
     @Produces(MediaType.APPLICATION_JSON) 
-    public QuizType getProblemCategory(@PathParam("quizTypeId") long quizTypeId) throws NoSuchModelException, ApplicationException {
+    public QuizType getQuizType(@PathParam("quizTypeId") long quizTypeId) throws NoSuchModelException, ApplicationException {
 		return quizService.getQuizTypeByPrimary(quizTypeId);
     }
     
 	@POST
 	@Path("quiztypes/provide")
 	@Consumes(MediaType.APPLICATION_JSON)
-	public void provideProblemCategory(QuizType quizType) throws ApplicationException {
+	public void provideQuizType(QuizType quizType) throws ApplicationException {
 		quizService.provideQuizType(quizType);
 	}
 

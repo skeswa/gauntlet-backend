@@ -29,7 +29,7 @@ import org.gauntlet.quizzes.model.jpa.JPAQuizType;
 @SuppressWarnings("restriction")
 @Transactional
 public class QuizDAOImpl extends BaseServiceImpl implements IQuizDAOService {
-	//Problems
+	//Quizzes
 	private volatile LogService logger;
 	
 	private volatile EntityManager em;
@@ -181,7 +181,7 @@ public class QuizDAOImpl extends BaseServiceImpl implements IQuizDAOService {
 	}
 	
 	@Override
-	public long countAllProblemCategories() throws ApplicationException {
+	public long countAllQuizTypes() throws ApplicationException {
 		long res = 0;
 		try {
 			res = super.countAll(JPAQuizType.class);

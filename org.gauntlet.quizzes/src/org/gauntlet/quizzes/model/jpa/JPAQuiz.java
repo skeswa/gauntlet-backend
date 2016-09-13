@@ -28,6 +28,16 @@ public class JPAQuiz extends JPABaseEntity implements Serializable {
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Set<JPAQuizProblem> questions = new java.util.HashSet<JPAQuizProblem>();
 	
+	
+	public JPAQuiz() {
+		setCode(String.format("Quiz %d", System.currentTimeMillis()));
+	}
+	
+	public JPAQuiz(JPAQuizType type, Set<JPAQuizProblem> questions) {
+		this();
+		this.quizType = quizType;
+		this.questions = questions;
+	}
 
 	public JPAQuizType getQuizType() {
 		return quizType;

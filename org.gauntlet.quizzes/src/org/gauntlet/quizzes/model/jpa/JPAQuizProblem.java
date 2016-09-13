@@ -12,8 +12,9 @@ import org.gauntlet.core.model.JPABaseEntity;
 @Entity
 @Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
 @Table(name=Constants.CNX_TABLE_NAME_PREFIX+Constants.GNT_TABLE_NAME_SEPARATOR
-	+"quiz_problem")
+	+"quiz_prob")
 public class JPAQuizProblem extends JPABaseEntity implements Serializable {
+	private Integer ordinal;
 	
 	private Long problemId;
 
@@ -34,6 +35,14 @@ public class JPAQuizProblem extends JPABaseEntity implements Serializable {
 
 	public void setProblemId(Long problemId) {
 		this.problemId = problemId;
+	}
+
+	public Integer getOrdinal() {
+		return ordinal;
+	}
+
+	public void setOrdinal(Integer ordinal) {
+		this.ordinal = ordinal;
 	}	
 }
 
