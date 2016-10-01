@@ -1,0 +1,5 @@
+package org.gauntlet.core.model;
+
+public interface Constants {
+
+}

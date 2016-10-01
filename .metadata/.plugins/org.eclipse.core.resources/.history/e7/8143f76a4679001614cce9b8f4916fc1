@@ -1,0 +1,5 @@
+felix.fileinstall.filename="file:/Users/mduduzikeswa/Documents/dev/mazasoft/java/gauntlet-backend/run/load/org.amdatu.tenant.factory-platform.cfg"
+org.amdatu.tenant.name="Platform"
+org.amdatu.tenant.pid="platform"
+service.factoryPid="org.amdatu.tenant.factory"
+service.pid="org.amdatu.tenant.factory.92fac83e-e810-4e31-90aa-4a27ff40d7ba"

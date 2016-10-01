@@ -1,0 +1,236 @@
+package org.gauntlet.quizzes.dao.impl;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.persistence.EntityManager;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.ParameterExpression;
+import javax.persistence.criteria.Root;
+
+import org.amdatu.jta.Transactional;
+import org.gauntlet.core.api.ApplicationException;
+import org.gauntlet.core.api.dao.NoSuchModelException;
+import org.gauntlet.core.commons.util.Validator;
+import org.gauntlet.core.commons.util.jpa.JPAEntityUtil;
+import org.gauntlet.core.model.JPABaseEntity;
+import org.gauntlet.core.service.impl.BaseServiceImpl;
+import org.osgi.service.log.LogService;
+import org.gauntlet.quizzes.api.dao.IQuizTakeDAOService;
+import org.gauntlet.quizzes.api.model.QuizTake;
+import org.gauntlet.quizzes.model.jpa.JPAQuizTake;
+
+
+@SuppressWarnings("restriction")
+@Transactional
+public class QuizTakeTakeDAOImpl extends BaseServiceImpl implements IQuizTakeDAOService {
+	//QuizTakezes
+	private volatile LogService logger;
+	
+	private volatile EntityManager em;
+	
+	@Override
+	public LogService getLogger() {
+		return logger;
+	}
+
+	public void setLogger(LogService logger) {
+		this.logger = logger;
+	}
+
+	@Override
+	public EntityManager getEm() {
+		return em;
+	}	
+	
+	@Override
+	public List<QuizTake> findAll(int start, int end) throws ApplicationException {
+		List<QuizTake> result = new ArrayList<>();
+		try {
+			List<JPABaseEntity> resultList = super.findAll(JPAQuizTake.class,start,end);
+			result = JPAEntityUtil.copy(resultList, QuizTake.class);
+		}
+		catch (Exception e) {
+			throw processException(e);
+		}
+		return result;		
+	}
+	
+	@Override
+	public long countAll() throws ApplicationException {
+		long res = 0;
+		try {
+			res = super.countAll(JPAQuizTake.class);
+		}
+		catch (Exception e) {
+			throw processException(e);
+		}
+		return res;
+	}	
+	
+	@Override
+	public QuizTake getByPrimary(Long pk) throws ApplicationException, NoSuchModelException {
+		JPAQuizTake jpaEntity = (JPAQuizTake) super.findByPrimaryKey(JPAQuizTake.class, pk);
+		return JPAEntityUtil.copy(jpaEntity, QuizTake.class);
+	}
+
+	@Override
+	public QuizTake provide(QuizTake record)
+			  throws ApplicationException {
+		QuizTake existingCountry = getByCode(record.getCode());
+		if (Validator.isNull(existingCountry))
+		{
+			JPABaseEntity res = super.add(JPAEntityUtil.copy(record, JPAQuizTake.class));
+			existingCountry = JPAEntityUtil.copy(res, QuizTake.class);
+		}
+
+		return existingCountry;
+	}
+	
+	@Override
+	public QuizTake update(QuizTake record) throws ApplicationException {
+		JPABaseEntity res = super.update(JPAEntityUtil.copy(record, JPAQuizTake.class));
+		QuizTake dto = JPAEntityUtil.copy(res, QuizTake.class);
+		return dto;	
+	}	
+	
+	@Override
+	public QuizTake delete(Long id) throws ApplicationException, NoSuchModelException {
+		JPAQuizTake jpaEntity = (JPAQuizTake) super.findByPrimaryKey(JPAQuizTake.class, id);
+		super.remove(jpaEntity);
+		return JPAEntityUtil.copy(jpaEntity, QuizTake.class);
+	}
+	
+	@Override
+	public QuizTake getByCode(String code) throws ApplicationException {
+		JPAQuizTake jpaEntity = (JPAQuizTake) super.findWithAttribute(JPAQuizTake.class, String.class,"code", code);
+		return JPAEntityUtil.copy(jpaEntity, QuizTake.class);
+	}
+
+
+	@Override
+	public QuizTake getByName(String name) throws ApplicationException {
+		JPAQuizTake jpaEntity = (JPAQuizTake) super.findWithAttribute(JPAQuizTake.class, String.class,"name", name);
+		return JPAEntityUtil.copy(jpaEntity, QuizTake.class);
+	}
+	
+	@Override 
+	public List<QuizTake> findByQuizTakeType(Long difficultyId, int start, int end) throws ApplicationException {
+		List<QuizTake> resultList = null;
+		try {
+			CriteriaBuilder builder = getEm().getCriteriaBuilder();
+			CriteriaQuery<JPAQuizTake> query = builder.createQuery(JPAQuizTake.class);
+			Root<JPAQuizTake> rootEntity = query.from(JPAQuizTake.class);
+			
+			ParameterExpression<Long> p = builder.parameter(Long.class);
+			query.select(rootEntity).where(builder.gt(rootEntity.get("quizType").get("id"),p));
+			query.select(rootEntity);
+			
+			Map<ParameterExpression,Object> pes = new HashMap<>();
+			pes.put(p, difficultyId);
+			
+			resultList = findWithDynamicQueryAndParams(query,pes,start,end);
+		}
+		catch (Exception e) {
+			throw processException(e);
+		}
+		return resultList;		
+	}
+	
+	@Override 
+	public int countByQuizTakeType(Long difficultyId) throws ApplicationException {
+		int count = 0;
+		try {
+			CriteriaBuilder builder = getEm().getCriteriaBuilder();
+			CriteriaQuery<JPAQuizTake> query = builder.createQuery(JPAQuizTake.class);
+			Root<JPAQuizTake> rootEntity = query.from(JPAQuizTake.class);
+			
+			ParameterExpression<Long> p = builder.parameter(Long.class);
+			query.select(rootEntity).where(builder.gt(rootEntity.get("quizType").get("id"),p));
+			query.select(rootEntity);
+			
+			Map<ParameterExpression,Object> pes = new HashMap<>();
+			pes.put(p, difficultyId);
+			
+			count = countWithDynamicQueryAndParams(query,pes);
+		}
+		catch (Exception e) {
+			throw processException(e);
+		}
+		return count;		
+	}	
+	
+	
+	//QuizTakeType
+	@Override 
+	public List<QuizTakeType> findAllQuizTakeTypes(int start, int end) throws ApplicationException {
+		List<QuizTakeType> result = new ArrayList<>();
+		try {
+			List<JPABaseEntity> resultList = super.findAll(JPAQuizTakeType.class,start,end);
+			result = JPAEntityUtil.copy(resultList, QuizTakeType.class);
+		}
+		catch (Exception e) {
+			throw processException(e);
+		}
+		return result;		
+	}
+	
+	@Override
+	public long countAllQuizTakeTypes() throws ApplicationException {
+		long res = 0;
+		try {
+			res = super.countAll(JPAQuizTakeType.class);
+		}
+		catch (Exception e) {
+			throw processException(e);
+		}
+		return res;
+	}	
+	
+	@Override
+	public QuizTakeType getQuizTakeTypeByPrimary(Long pk) throws ApplicationException, NoSuchModelException {
+		JPAQuizTakeType jpaEntity = (JPAQuizTakeType) super.findByPrimaryKey(JPAQuizTakeType.class, pk);
+		return JPAEntityUtil.copy(jpaEntity, QuizTakeType.class);
+	}
+	
+	@Override 
+	public QuizTakeType provideQuizTakeType(QuizTakeType record) throws ApplicationException {
+		QuizTakeType existingCountry = getQuizTakeTypeByCode(record.getCode());
+		if (Validator.isNull(existingCountry))
+		{
+			JPABaseEntity res = super.add(JPAEntityUtil.copy(record, JPAQuizTakeType.class));
+			existingCountry = JPAEntityUtil.copy(res, QuizTakeType.class);
+		}
+
+		return existingCountry;	
+	}
+	
+	public QuizTakeType updateQuizTakeType(JPAQuizTakeType record) throws ApplicationException {
+		JPABaseEntity res = super.update(JPAEntityUtil.copy(record, JPAQuizTakeType.class));
+		QuizTakeType dto = JPAEntityUtil.copy(res, QuizTakeType.class);
+		return dto;	
+	}	
+	
+	public QuizTakeType getQuizTakeTypeByCode(String code) throws ApplicationException{
+		JPAQuizTakeType jpaEntity = (JPAQuizTakeType) super.findWithAttribute(JPAQuizTakeType.class, String.class,"code", code);
+		return JPAEntityUtil.copy(jpaEntity, QuizTakeType.class);		
+	}
+	
+	public QuizTakeType getQuizTakeTypeByName(String code) throws ApplicationException{
+		JPAQuizTakeType jpaEntity = (JPAQuizTakeType) super.findWithAttribute(JPAQuizTakeType.class, String.class,"name", code);
+		return JPAEntityUtil.copy(jpaEntity, QuizTakeType.class);		
+	}
+	
+	public QuizTakeType deleteQuizTakeType(Long id) throws ApplicationException, NoSuchModelException {
+		JPAQuizTakeType jpaEntity = (JPAQuizTakeType) super.findByPrimaryKey(JPAQuizTakeType.class, id);
+		super.remove(jpaEntity);
+		return JPAEntityUtil.copy(jpaEntity, QuizTakeType.class);
+	}	
+
+	@Override
+	public void createDefaults() throws ApplicationException {
+	}	
+}

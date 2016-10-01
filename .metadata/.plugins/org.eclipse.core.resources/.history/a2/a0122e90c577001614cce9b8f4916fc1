@@ -1,0 +1,84 @@
+package org.conxworks.masterdata.dao.impl.osgi;
+
+import java.util.Properties;
+
+import javax.persistence.EntityManager;
+
+import org.amdatu.jta.ManagedTransactional;
+import org.apache.felix.dm.DependencyActivatorBase;
+import org.apache.felix.dm.DependencyManager;
+import org.conxworks.masterdata.dao.api.geolocation.ICountryDAOService;
+import org.conxworks.masterdata.dao.api.geolocation.ICountryStateDAOService;
+import org.conxworks.masterdata.dao.api.geolocation.IUnlocoDAOService;
+import org.conxworks.masterdata.dao.api.organization.IOrganizationDAOService;
+import org.conxworks.masterdata.dao.api.referencenumber.IReferenceNumberDAOService;
+import org.conxworks.masterdata.dao.api.referencenumber.IReferenceNumberTypeDAOService;
+import org.conxworks.masterdata.dao.impl.geolocation.CountryDAOImpl;
+import org.conxworks.masterdata.dao.impl.geolocation.UnlocoDAOImpl;
+import org.conxworks.masterdata.dao.impl.organization.OrganizationDAOImpl;
+import org.conxworks.masterdata.dao.impl.referencenumber.ReferenceNumberDAOImpl;
+import org.conxworks.masterdata.dao.impl.referencenumber.ReferenceNumberTypeDAOImpl;
+import org.conxworks.masterdata.model.constants.CONSTANTS;
+import org.osgi.framework.BundleContext;
+import org.osgi.service.log.LogService;
+
+public class MTActivator extends DependencyActivatorBase {
+
+	@Override
+	public void destroy(BundleContext arg0, DependencyManager arg1) throws Exception {
+
+	}
+
+	@Override
+	public void init(BundleContext arg0, DependencyManager dm) throws Exception {
+		String entityManagerModuleFilter = String.format("(%s=%s)",org.osgi.service.jpa.EntityManagerFactoryBuilder.JPA_UNIT_NAME,CONSTANTS.CNX_JPA_MODULE);
+		
+		Properties props;
+		
+		//- geolocation
+		props = new Properties();
+		props.put(ManagedTransactional.SERVICE_PROPERTY, ICountryDAOService.class.getName());
+		dm.add(createComponent().setInterface(Object.class.getName(), props)
+				.setImplementation(CountryDAOImpl.class)
+				.add(createServiceDependency().setService(EntityManager.class,entityManagerModuleFilter).setRequired(true))
+				.add(createServiceDependency().setService(LogService.class).setRequired(false)));
+		
+		props = new Properties();
+		props.put(ManagedTransactional.SERVICE_PROPERTY, ICountryStateDAOService.class.getName());
+		dm.add(createComponent().setInterface(Object.class.getName(), props)
+				.setImplementation(CountryDAOImpl.class)
+				.add(createServiceDependency().setService(EntityManager.class,entityManagerModuleFilter).setRequired(true))
+				.add(createServiceDependency().setService(LogService.class).setRequired(false)));		
+		
+		props = new Properties();
+		props.put(ManagedTransactional.SERVICE_PROPERTY, IUnlocoDAOService.class.getName());
+		dm.add(createComponent().setInterface(Object.class.getName(), props)
+				.setImplementation(UnlocoDAOImpl.class)
+				.add(createServiceDependency().setService(EntityManager.class,entityManagerModuleFilter).setRequired(true))
+				.add(createServiceDependency().setService(LogService.class).setRequired(false)));	
+		
+		//- organization
+		props = new Properties();
+		props.put(ManagedTransactional.SERVICE_PROPERTY, IOrganizationDAOService.class.getName());
+		dm.add(createComponent().setInterface(Object.class.getName(), props)
+				.setImplementation(OrganizationDAOImpl.class)
+				.add(createServiceDependency().setService(EntityManager.class,entityManagerModuleFilter).setRequired(true))
+				.add(createServiceDependency().setService(LogService.class).setRequired(false)));
+		
+		
+		//- referencenumber
+		props = new Properties();
+		props.put(ManagedTransactional.SERVICE_PROPERTY, IReferenceNumberDAOService.class.getName());
+		dm.add(createComponent().setInterface(Object.class.getName(), props)
+				.setImplementation(ReferenceNumberDAOImpl.class)
+				.add(createServiceDependency().setService(EntityManager.class,entityManagerModuleFilter).setRequired(true))
+				.add(createServiceDependency().setService(LogService.class).setRequired(false)));
+		
+		props = new Properties();
+		props.put(ManagedTransactional.SERVICE_PROPERTY, IReferenceNumberTypeDAOService.class.getName());
+		dm.add(createComponent().setInterface(Object.class.getName(), props)
+				.setImplementation(ReferenceNumberTypeDAOImpl.class)
+				.add(createServiceDependency().setService(EntityManager.class,entityManagerModuleFilter).setRequired(true))
+				.add(createServiceDependency().setService(LogService.class).setRequired(false)));		
+	}
+}

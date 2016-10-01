@@ -1,0 +1,6 @@
+GAUNTLET_DB_USERNAME=gauntlet-admin
+GAUNTLET_DB_PASS=getmandisagoodatsatmath
+GAUNTLET_DB_HOST=infra_db_1
+GAUNTLET_DB_PORT=5432
+GAUNTLET_DB_NAME=gauntlet
+GAUNTLET_DB_SCHEMA=gauntlet

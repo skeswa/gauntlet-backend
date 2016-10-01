@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+
+
+    Copyright 2013 lb
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<persistence
+    xsi:schemaLocation="
+        http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+    xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    version="2.0">
+
+    <!-- ******************************************************************* -->
+    <!-- JTA                                                                 -->
+    <!-- ******************************************************************* -->
+
+    <persistence-unit name="cnxwks_masterdata" transaction-type="JTA">
+		<jta-data-source>
+			<![CDATA[
+			osgi:javax.sql.DataSource/(name=jta-cnxwks)
+			]]>
+		</jta-data-source>
+		<non-jta-data-source>
+			<![CDATA[
+			osgi:javax.sql.DataSource/(name=nonjta-cnxwks)
+			]]>
+		</non-jta-data-source>	       
+         
+        <!-- Based -->
+        <class>org.conxworks.core.model.JPABaseEntity</class>
+        
+    	
+    	<!-- CommercialRecord -->
+    	<class>org.conxworks.masterdata.model.jpa.commercialrecord.JPACommercialRecord</class>
+    	<class>org.conxworks.masterdata.model.jpa.commercialrecord.JPACommercialValue</class>
+
+   		<!-- Currency -->
+    	<class>org.conxworks.masterdata.model.jpa.currency.JPACurrencyUnit</class>
+    	
+        <!-- Geolocation -->
+        <class>org.conxworks.masterdata.model.jpa.geolocation.JPAAddress</class>
+    	<class>org.conxworks.masterdata.model.jpa.geolocation.JPAAddressCapability</class>
+    	<class>org.conxworks.masterdata.model.jpa.geolocation.JPAAddressType</class>
+    	<class>org.conxworks.masterdata.model.jpa.geolocation.JPAAddressTypeAddress</class>
+    	<class>org.conxworks.masterdata.model.jpa.geolocation.JPACountry</class>
+    	<class>org.conxworks.masterdata.model.jpa.geolocation.JPACountryState</class>
+    	<class>org.conxworks.masterdata.model.jpa.geolocation.JPAAddress</class>
+    	<class>org.conxworks.masterdata.model.jpa.geolocation.JPAUnloco</class>    	
+    	    
+        <!-- Organization -->
+        <class>org.conxworks.masterdata.model.jpa.organization.JPAContact</class>
+    	<class>org.conxworks.masterdata.model.jpa.organization.JPAContactGroup</class>
+    	<class>org.conxworks.masterdata.model.jpa.organization.JPAContactGroupContact</class>
+    	<class>org.conxworks.masterdata.model.jpa.organization.JPAContactType</class>
+    	<class>org.conxworks.masterdata.model.jpa.organization.JPAContactTypeContact</class>
+    	<class>org.conxworks.masterdata.model.jpa.organization.JPAOrganization</class>
+    	    	
+    	<!-- ReferenceNumbers -->
+    	<class>org.conxworks.masterdata.model.jpa.referencenumber.JPAReferenceNumber</class>
+    	<class>org.conxworks.masterdata.model.jpa.referencenumber.JPAReferenceNumberType</class>
+    	
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<properties>  
+			<property name="org.amdatu.jpa.allowNonTransactionalEntityManagerAccess" value="true"/>
+			<property name="openjpa.ManagedRuntime" value="org.apache.openjpa.ee.OSGiManagedRuntime"/>
+			<property name="openjpa.Log" value="slf4j"/>
+			<property name="openjpa.ConnectionFactoryProperties" value="PrintParameters=true" />
+			
+            <property name="openjpa.Log" 
+                      value="DefaultLevel=ERROR, Runtime=TRACE, Tool=ERROR, SQL=TRACE"/>	<!-- TRACE,INFO,WARN,ERROR,FATAL -->		
+			<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+			<property name="openjpa.jdbc.SchemaFactory" value="native(ForeignKeys=true)"/>
+			<property name="openjpa.jdbc.MappingDefaults" value="ForeignKeyDeleteAction=restrict,JoinForeignKeyDeleteAction=restrict"/>
+
+  		</properties>
+    </persistence-unit>
+
+</persistence>

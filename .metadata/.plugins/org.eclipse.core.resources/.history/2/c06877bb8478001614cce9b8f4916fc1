@@ -1,0 +1,4 @@
+# Import JCR zipped export
+repo = (repo)
+$repo upload
+misc:shutdown 0

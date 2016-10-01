@@ -1,0 +1,9 @@
+package org.conxworks.masterdata.model.constants;
+
+import org.conxworks.core.model.constants.CONXPERSISTENCE;
+
+public interface CONSTANTS extends CONXPERSISTENCE{
+	public static final String CNX_TABLE_NAME_PREFIX = "cnxwks";
+	public static final String CNX_MODULE = "mdm";
+	public static final String CNX_JPA_MODULE = "cnxwks_masterdata";
+}

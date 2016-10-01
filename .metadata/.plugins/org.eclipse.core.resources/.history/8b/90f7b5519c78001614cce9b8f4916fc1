@@ -1,0 +1,5 @@
+factory.pid="org.amdatu.jpa.datasourcefactory"
+factory.pidList=[ \
+  "org.amdatu.jpa.datasourcefactory.8eced2f1-ff53-40ec-9fd2-0758179bbdf8", \
+  "org.amdatu.jpa.datasourcefactory.4631adde-1741-4244-883c-3a841e6c19a1", \
+  ]

@@ -11,25 +11,25 @@
 hs_err_pid*
 
 #Bndtools
-run/generated
-.gradle
-gradle
-*/build
-release
+#run/generated
+#.gradle
+#gradle
+#*/build
+#release
 RemoteSystemsTempFiles
 
 #Eclipse
-.metadata
-bin/
+#.metadata
+#bin/
 tmp/
 *.tmp
 *.bak
 *.swp
 *~.nib
 local.properties
-.settings/
-.loadpath
-.recommenders
+#.settings/
+#.loadpath
+#.recommenders
 
 # Eclipse Core
 #.project

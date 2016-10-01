@@ -1,0 +1,3 @@
+PG_DBNAMES=conxplatform
+PG_PASSWORD=conxadmin
+PG_USERNAME=conxadmin

@@ -1,0 +1,20 @@
+1473559885996	Rename type 'OrganizationDAOImpl'
+1473562015000	Rename type 'CONSTANTS'
+1473562374328	Delete element
+1473598703772	Rename local variable 'assetId'
+1473599013505	Rename local variable 'existingOrganization'
+1473602722406	Move compilation unit
+1473602741369	Rename type 'ProductsResource'
+1473614690204	Delete element
+1473623328788	Rename resource 'dao.impl.bnd'
+1473623345578	Copy file
+1473623400462	Copy compilation unit
+1473623425407	Copy file
+1473623471667	Copy compilation unit
+1473623499332	Copy file
+1473623747042	Delete elements
+1473630961845	Delete element
+1473632252939	Copy file
+1473700483488	Copy compilation unit
+1473700854130	Copy compilation unit
+1473701242185	Rename method 'convertFiletoByteArray'

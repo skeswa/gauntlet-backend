@@ -1,0 +1,67 @@
+package org.gauntlet.problems.model.jpa;
+
+import java.io.Serializable;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import org.gauntlet.core.model.Constants;
+import org.gauntlet.core.model.JPABaseEntity;
+
+@Entity
+@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
+@Table(name=Constants.CNX_TABLE_NAME_PREFIX+Constants.GNT_TABLE_NAME_SEPARATOR
+	+"problem")
+public class JPAProblem extends JPABaseEntity implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7103409605829512906L;
+
+	public  static boolean defaultsCreated = false;
+
+    private String code3;
+
+    private String number;
+    
+    @OneToMany(cascade = {CascadeType.PERSIST,CascadeType.REMOVE},mappedBy="country",targetEntity=JPACountryState.class)
+    private Set<JPACountryState> states = new java.util.HashSet<JPACountryState>();
+
+	public static boolean isDefaultsCreated() {
+		return defaultsCreated;
+	}
+
+	public static void setDefaultsCreated(boolean defaultsCreated) {
+		JPAProblem.defaultsCreated = defaultsCreated;
+	}
+
+	public String getCode3() {
+		return code3;
+	}
+
+	public void setCode3(String code3) {
+		this.code3 = code3;
+	}
+
+	public String getNumber() {
+		return number;
+	}
+
+	public void setNumber(String number) {
+		this.number = number;
+	}
+
+	public Set<JPACountryState> getStates() {
+		return states;
+	}
+
+	public void setStates(Set<JPACountryState> states) {
+		this.states = states;
+	}
+}

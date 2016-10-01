@@ -1,0 +1,21 @@
+package org.gauntlet.quizzes.api.model;
+
+import java.io.Serializable;
+
+import org.gauntlet.core.model.BaseEntity;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+public class Quiz extends BaseEntity implements Serializable {
+	
+	private QuizType quizType;
+
+	private List<>
+	public QuizType getQuizType() {
+		return quizType;
+	}
+
+	public void setQuizType(QuizType quizType) {
+		this.quizType = quizType;
+	}
+}

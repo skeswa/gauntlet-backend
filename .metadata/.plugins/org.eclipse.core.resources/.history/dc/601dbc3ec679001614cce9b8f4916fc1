@@ -1,0 +1,22 @@
+set -e
+
+# Apply env vars
+sed -i "s/GAUNTLET_DB_USERNAME/${GAUNTLET_DB_USERNAME}/g" load/
+sed -i "s/HOST/${PGHOST}/g" ${PENTAHO_HOME}/cluster/repository.xml
+sed -i "s/PORT/${PGPORT}/g" ${PENTAHO_HOME}/cluster/repository.xml
+
+cp ${PENTAHO_HOME}/cluster/repository.xml ${PENTAHO_HOME}/server/biserver-ee/pentaho-solutions/system/jackrabbit/repository.xml
+cp ${PENTAHO_HOME}/cluster/quartz.properties ${PENTAHO_HOME}/server/biserver-ee/pentaho-solutions/system/quartz/quartz.properties
+
+# start Apache ACE
+# ACE target must be linked to this container under the name "ace" (or somehow else be reachable under the hostname "ace") and must be running on port 8080
+ls scripts/*
+sh start_jcr_client.sh
+
+
+
+userName=${GAUNTLET_DB_USERNAME}
+password=${GAUNTLET_DB_PASS}
+driverClassName=org.postgresql.Driver
+driverName=postgresql
+jdbcUrl=jdbc:postgresql://${GAUNTLET_DB_HOST}:${GAUNTLET_DB_PORT}/${GAUNTLET_DB_NAME}

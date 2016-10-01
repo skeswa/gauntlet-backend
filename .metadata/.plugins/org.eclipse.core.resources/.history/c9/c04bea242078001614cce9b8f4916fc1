@@ -1,0 +1,57 @@
+package org.gauntlet.problems.dao.impl;
+
+import javax.persistence.EntityManager;
+
+import org.amdatu.jta.Transactional;
+import org.gauntlet.core.api.ApplicationException;
+import org.gauntlet.core.commons.util.Validator;
+import org.osgi.service.log.LogService;
+import org.gauntlet.problems.api.dao.IProblemDAOService;
+import org.gauntlet.problems.api.model.Problem;
+
+
+@SuppressWarnings("restriction")
+@Transactional
+public class ProblemDAOImpl extends BaseDAOImpl<Problem> implements IProblemDAOService {
+	
+	private volatile LogService logger;
+	
+	private volatile EntityManager em;
+	
+	@Override
+	public LogService getLogger() {
+		return logger;
+	}
+
+	public void setLogger(LogService logger) {
+		this.logger = logger;
+	}
+
+	@Override
+	public EntityManager getEm() {
+		return em;
+	}	
+
+
+	@Override
+	public Problem provide(Problem record)
+			  throws ApplicationException {
+		Problem existingOrganization = getByCode(record.getCode());
+		if (Validator.isNull(existingOrganization))
+		{
+			existingOrganization = add(record);
+		}
+		return existingOrganization;
+	}
+	
+	@Override
+	public Problem getByCode(String code) throws ApplicationException {
+		return super.findWithAttribute(Problem.class, String.class,"code", code);
+	}
+
+
+	@Override
+	public Problem getByName(String name) throws ApplicationException {
+		return super.findWithAttribute(Problem.class, String.class,"name", name);
+	}
+}

@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+set -x
+# This script will be executed once on a `docker run`.
+
+# start Apache ACE client
+java \
+      -Dgosh.args=--nointeractive \
+      -Djcr.server.hostname=${JCR_SERVER_HOSTNAME},\
+      -Djcr.server.port=${JCR_SERVER_PORT},\
+      -Djcr.importer.file=${JCR_IMPORTER_ZIPFILE},\
+      -Djcr.backup.file.path=${JCR_BACKUP_PATH},\
+      -Dorg.osgi.service.http.port=-1 \
+      -Dace.gogo.script=scripts/importRepository.gogo \
+      -jar gauntlet-backend.jar

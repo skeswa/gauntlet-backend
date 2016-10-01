@@ -1,0 +1,5 @@
+felix.fileinstall.filename="file:/Users/mduduzikeswa/Documents/dev/mazasoft/java/gauntlet-backend/run/load/org.amdatu.tenant.factory-conxtenantA.cfg"
+org.amdatu.tenant.name="Tenant\ Demo"
+org.amdatu.tenant.pid="demo"
+service.factoryPid="org.amdatu.tenant.factory"
+service.pid="org.amdatu.tenant.factory.45acab08-b8dd-402e-b213-b01262de2a69"
