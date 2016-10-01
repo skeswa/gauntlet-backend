@@ -17,11 +17,9 @@ import javax.ws.rs.DELETE;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -58,10 +56,10 @@ public class ProblemsResource {
     public List<Problem> listProducts(@PathParam("difficulty") long difficulty, @PathParam("start") int start, @PathParam("end") int end ) throws ApplicationException {
 		return problemService.findByDifficulty(difficulty,start,end);
     }
-	
 	@GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Problem> all(@QueryParam("start") int start, @QueryParam("end") int end) throws ApplicationException {
+	@Path("all/{start}/{end}")
+    public List<Problem> all(@PathParam("start") int start, @PathParam("end") int end) throws ApplicationException {
 		return problemService.findAll(start, end);
     }	
 	
@@ -73,7 +71,6 @@ public class ProblemsResource {
     }
     
 	@POST
-	@Path("{problemId}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void updateProblem(Problem problem) throws ApplicationException {
 		problemService.update(problem);
@@ -86,7 +83,8 @@ public class ProblemsResource {
 	}
 	
     
-    @PUT 
+    @POST 
+    @Path("provide") 
     @Consumes(MediaType.MULTIPART_FORM_DATA) 
     @Produces(MediaType.APPLICATION_JSON) 
     public Problem provide(@Context HttpServletRequest request) throws IOException, ApplicationException { 
