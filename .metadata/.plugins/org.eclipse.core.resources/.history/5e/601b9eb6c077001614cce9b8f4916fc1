@@ -1,6 +1,0 @@
-Bundle-Version: 1.0.0.${tstamp}
-Export-Package:  \
-	org.conxworks.core.commons.util,\
-	org.conxworks.core.commons.util.io,\
-	org.conxworks.core.commons.util.jpa,\
-	org.conxworks.core.commons.util.bean

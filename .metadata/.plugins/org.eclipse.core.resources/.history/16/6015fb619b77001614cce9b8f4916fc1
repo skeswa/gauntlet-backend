@@ -1,8 +1,0 @@
-Bundle-Version: 1.0.0.${tstamp}
-Export-Package:  \
-	org.conxworks.core.model,\
-	org.conxworks.core.model.constants,\
-	org.conxworks.core.model.geolocation,\
-	org.conxworks.core.model.organization,\
-	org.conxworks.core.model.role,\
-	org.conxworks.core.model.user

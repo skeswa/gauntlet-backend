@@ -1,4 +1,0 @@
-Export-Package: \
-	org.gauntlet.problems.api.model,\
-	org.gauntlet.quizzes.api.dao
-Bundle-Version: 1.0.0.${tstamp}

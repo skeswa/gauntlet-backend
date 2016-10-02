@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="org.gauntlet.core.service.impl.BaseServiceImpl"/>
 <fullyQualifiedTypeName name="org.gauntlet.core.commons.util.jpa.JPAEntityUtil"/>
 <fullyQualifiedTypeName name="org.gauntlet.core.model.JPABaseEntity"/>
 <fullyQualifiedTypeName name="org.gauntlet.problems.model.jpa.JPAProblemSource"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="org.gauntlet.quizzes.dao.impl.QuizTakeDAOImpl"/>
 <fullyQualifiedTypeName name="org.gauntlet.quizzes.api.dao.IQuizDAOService"/>
 <fullyQualifiedTypeName name="org.gauntlet.quizzes.api.dao.IQuizTakeDAOService"/>
+<fullyQualifiedTypeName name="javax.ws.rs.PUT"/>
+<fullyQualifiedTypeName name="javax.ws.rs.QueryParam"/>
 </qualifiedTypeNameHistroy>

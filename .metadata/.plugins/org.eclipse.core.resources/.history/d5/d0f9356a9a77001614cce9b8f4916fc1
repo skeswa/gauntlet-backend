@@ -1,6 +1,0 @@
-Bundle-Version: 1.0.0.${tstamp}
-Export-Package:  \
-	org.conxworks.core.api,\
-	org.conxworks.core.dao.api,\
-	org.conxworks.core.service.api,\
-	org.conxworks.core.model.constants

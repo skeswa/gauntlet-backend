@@ -1,4 +1,0 @@
-factory.pid="org.amdatu.tenant.factory"
-factory.pidList=[ \
-  "org.amdatu.tenant.factory.db8827d7-0828-4e57-82fa-b5cd60ed0ec8", \
-  ]

@@ -1,8 +1,0 @@
-package org.gauntlet.problems.api.model;
-
-
-public interface CONSTANTS {
-	public static final String CNX_TABLE_NAME_PREFIX = "cnxwks";
-	public static final String CNX_MODULE = "mdm";
-	public static final String CNX_JPA_MODULE = "cnxwks_masterdata";
-}

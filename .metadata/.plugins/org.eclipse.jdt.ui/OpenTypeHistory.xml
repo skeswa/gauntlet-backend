@@ -2,4 +2,5 @@
 <typeInfoHistroy>
 <typeInfo handle="=org.gauntlet.problems/src&lt;org.gauntlet.problems.dao.impl.osgi{Activator.java[Activator" modifiers="1" timestamp="1473623400000"/>
 <typeInfo handle="=org.gauntlet.problems/src&lt;org.gauntlet.problems.model.jpa{JPAProblemPicture.java[JPAProblemPicture" modifiers="1" timestamp="1473712305000"/>
+<typeInfo handle="=org.gauntlet.problems/src&lt;org.gauntlet.problems.model.jpa{JPAProblemDifficulty.java[JPAProblemDifficulty" modifiers="1" timestamp="1473544459000"/>
 </typeInfoHistroy>

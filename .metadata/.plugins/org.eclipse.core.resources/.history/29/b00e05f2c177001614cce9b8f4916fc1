@@ -1,6 +1,0 @@
-Bundle-Version: 1.0.0.${tstamp}
-Export-Package:  \
-	org.conxworks.core.dao.impl
-Private-Package:  \
-	org.conxworks.core.dao.impl,\
-	org.conxworks.core.dao.api

@@ -1,5 +1,0 @@
-package org.gauntlet.problems.api.model;
-
-public class ProblemDifficulty {
-
-}

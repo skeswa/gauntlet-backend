@@ -1,9 +1,0 @@
-package org.gauntlet.problems.api.dao;
-
-public interface IOrganizationDAOService extends IBaseDAO<Organization> {
-	public Organization provide(Organization record) throws ApplicationException;
-
-	public Organization getByCode(String code) throws ApplicationException;
-
-	public Organization getByName(String name) throws ApplicationException;
-}
