@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="org.gauntlet.core.commons.util.jpa.JPAEntityUtil"/>
 <fullyQualifiedTypeName name="org.gauntlet.core.model.JPABaseEntity"/>
 <fullyQualifiedTypeName name="org.gauntlet.problems.model.jpa.JPAProblemSource"/>
+=======
+>>>>>>> c3c856da62e073183209eb210b26c103bfaaa0ea
 <fullyQualifiedTypeName name="org.gauntlet.core.api.service.IBaseService"/>
 <fullyQualifiedTypeName name="org.gauntlet.problems.model.jpa.JPAProblem"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
@@ -56,8 +59,16 @@
 <fullyQualifiedTypeName name="org.gauntlet.quizzes.api.model.QuizProblemAnswer"/>
 <fullyQualifiedTypeName name="org.gauntlet.quizzes.rest.QuizTakeResource"/>
 <fullyQualifiedTypeName name="org.gauntlet.quizzes.dao.impl.QuizTakeDAOImpl"/>
-<fullyQualifiedTypeName name="org.gauntlet.quizzes.api.dao.IQuizDAOService"/>
 <fullyQualifiedTypeName name="org.gauntlet.quizzes.api.dao.IQuizTakeDAOService"/>
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="javax.ws.rs.PUT"/>
 <fullyQualifiedTypeName name="javax.ws.rs.QueryParam"/>
+=======
+<fullyQualifiedTypeName name="org.gauntlet.problems.rest.DifficultiesResource"/>
+<fullyQualifiedTypeName name="org.gauntlet.problems.rest.CategoriesResource"/>
+<fullyQualifiedTypeName name="org.gauntlet.problems.rest.SourcesResource"/>
+<fullyQualifiedTypeName name="javax.ws.rs.QueryParam"/>
+<fullyQualifiedTypeName name="org.gauntlet.quizzes.api.model.QuizType"/>
+<fullyQualifiedTypeName name="org.gauntlet.quizzes.api.dao.IQuizDAOService"/>
+>>>>>>> c3c856da62e073183209eb210b26c103bfaaa0ea
 </qualifiedTypeNameHistroy>

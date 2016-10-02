@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
+<<<<<<< HEAD
 <typeInfo handle="=org.gauntlet.problems/src&lt;org.gauntlet.problems.dao.impl.osgi{Activator.java[Activator" modifiers="1" timestamp="1473623400000"/>
 <typeInfo handle="=org.gauntlet.problems/src&lt;org.gauntlet.problems.model.jpa{JPAProblemPicture.java[JPAProblemPicture" modifiers="1" timestamp="1473712305000"/>
 <typeInfo handle="=org.gauntlet.problems/src&lt;org.gauntlet.problems.model.jpa{JPAProblemDifficulty.java[JPAProblemDifficulty" modifiers="1" timestamp="1473544459000"/>
+=======
+<typeInfo handle="=org.gauntlet.problems/src&lt;org.gauntlet.problems.dao.impl.osgi{Activator.java[Activator" modifiers="1" timestamp="1475350719000"/>
+<typeInfo handle="=org.gauntlet.problems/src&lt;org.gauntlet.problems.model.jpa{JPAProblemPicture.java[JPAProblemPicture" modifiers="1" timestamp="1475350719000"/>
+>>>>>>> c3c856da62e073183209eb210b26c103bfaaa0ea
 </typeInfoHistroy>
