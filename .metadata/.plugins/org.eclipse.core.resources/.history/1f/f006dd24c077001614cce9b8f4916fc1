@@ -1,8 +1,0 @@
-package org.conxworks.core.service.api;
-
-import org.conxworks.core.api.ApplicationException;
-
-
-public interface IBaseService {
-	public void createDefaults() throws ApplicationException;
-}

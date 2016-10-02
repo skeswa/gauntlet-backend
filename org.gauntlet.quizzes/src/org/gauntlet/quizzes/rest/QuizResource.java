@@ -9,6 +9,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.gauntlet.core.api.ApplicationException;
@@ -31,15 +32,18 @@ public class QuizResource {
 	@GET
     @Produces(MediaType.APPLICATION_JSON)
 	@Path("all/quiztype/{quizType}/{start}/{end}")
-    public List<Quiz> listProducts(@PathParam("quizType") long quizType, @PathParam("start") int start, @PathParam("end") int end ) throws ApplicationException {
+    public List<Quiz> listProducts(@PathParam("quizType") long quizType, @QueryParam("start") int start, @QueryParam("end") int end ) throws ApplicationException {
 		return quizService.findByQuizType(quizType,start,end);
     }
+	
 	@GET
     @Produces(MediaType.APPLICATION_JSON)
-	@Path("all/{start}/{end}")
-    public List<Quiz> all(@PathParam("start") int start, @PathParam("end") int end) throws ApplicationException {
+    public List<Quiz> all(
+    		@QueryParam("start") final Integer start,
+    		@QueryParam("end") final Integer end,
+    		@QueryParam("quizTypeId") final Long quizTypeId) throws ApplicationException {
 		return quizService.findAll(start, end);
-    }	
+    }
 	
     @GET 
     @Path("{quizId}") 
@@ -79,7 +83,7 @@ public class QuizResource {
 	@GET
     @Produces(MediaType.APPLICATION_JSON)
 	@Path("quiztypes/all/{start}/{end}")
-    public List<QuizType> allCategories(@PathParam("start") int start, @PathParam("end") int end) throws ApplicationException {
+    public List<QuizType> allCategories(@QueryParam("start") int start, @QueryParam("end") int end) throws ApplicationException {
 		return quizService.findAllQuizTypes(start, end);
     }	
 	

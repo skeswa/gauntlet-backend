@@ -1,4 +1,0 @@
-Bundle-Activator: webshop.products.rest.Activator
-Private-Package: \
-	org.gauntlet.problems.rest,\
-	org.gauntlet.problems.rest.osgi

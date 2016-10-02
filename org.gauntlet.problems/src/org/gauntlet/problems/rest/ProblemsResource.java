@@ -1,5 +1,6 @@
 package org.gauntlet.problems.rest;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -22,6 +23,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
@@ -47,8 +49,9 @@ public class ProblemsResource {
 	 * ========= Problems
 	 */
 	@GET
+	@Path("difficulty")
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<Problem> listProducts(@PathParam("difficulty") long difficulty, @QueryParam("start") int start,
+	public List<Problem> listProblems(@PathParam("difficulty") long difficulty, @QueryParam("start") int start,
 			@QueryParam("end") int end) throws ApplicationException {
 		return problemService.findByDifficulty(difficulty, start, end);
 	}
@@ -168,7 +171,8 @@ public class ProblemsResource {
 			String ct = fi.getContentType();
 			long cs = fi.getSize();
 			String fileName = ((FileItem) fi).getName();
-			pp = new ProblemPicture(fileName, fileName, content, ct, cs);
+			final String code = Long.toString(System.currentTimeMillis()) + fileName;
+			pp = new ProblemPicture(code, code, content, ct, cs);
 		} finally {
 			((FileItem) fi).delete();
 		}
@@ -204,21 +208,18 @@ public class ProblemsResource {
 		return bytes;
 	}
 
-	/**
-	 * 
-	 * ========= Problem cats
-	 */
-	
+	@GET
+	@Path("pictures/{pictureId}")
+	public Response getImage(@PathParam("pictureId") String pictureId) throws ApplicationException {
+		ProblemPicture pp;
+		try {
+			pp = problemService.getProblemPictureByPrimary(Long.valueOf(pictureId));
+			InputStream pictureStream = new ByteArrayInputStream(pp.getPicture());
+			MediaType mediaType = new MediaType("image", "png");
 
-	/**
-	 * 
-	 * ========= Problem diff's
-	 */
-	
-
-	/**
-	 * 
-	 * ========= Problem src's
-	 */
-	
+			return Response.ok().type(mediaType).entity(pictureStream).build();
+		} catch (NumberFormatException | ApplicationException | NoSuchModelException e) {
+			throw new ApplicationException(e);
+		}
+	}
 }

@@ -23,7 +23,6 @@ public class DifficultiesResource {
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("difficulties")
 	public List<ProblemDifficulty> allDifficulties(@QueryParam("start") int start, @QueryParam("end") int end)
 			throws ApplicationException {
 		return problemService.findAllProblemDifficulties(start, end);
@@ -31,13 +30,13 @@ public class DifficultiesResource {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("difficulties/count")
+	@Path("count")
 	public long countDifficulties() throws ApplicationException {
 		return problemService.countAllProblemDifficulties();
 	}
 
 	@GET
-	@Path("difficulties/{problemDifficultyId}")
+	@Path("{problemDifficultyId}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public ProblemDifficulty getProblemDifficulty(@PathParam("problemDifficultyId") long problemDifficultyId)
 			throws NoSuchModelException, ApplicationException {
@@ -45,14 +44,13 @@ public class DifficultiesResource {
 	}
 
 	@PUT
-	@Path("difficulties")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void provideProblemDifficulty(ProblemDifficulty problemDifficulty) throws ApplicationException {
 		problemService.provideProblemDifficulty(problemDifficulty);
 	}
 
 	@DELETE
-	@Path("difficulties/{problemDifficultyId}")
+	@Path("{problemDifficultyId}")
 	public void deleteProbleDifficulty(@PathParam("problemDifficultyId") long problemDifficultyId)
 			throws NoSuchModelException, ApplicationException {
 		problemService.deleteProblemDifficulty(problemDifficultyId);

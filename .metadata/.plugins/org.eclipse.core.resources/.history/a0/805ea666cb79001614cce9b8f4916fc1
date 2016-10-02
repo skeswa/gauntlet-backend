@@ -1,6 +1,0 @@
-#! /bin/sh
-export SWARM_HOST=tcp://192.168.15.111:3376
-export OPTS="-H=tcp://192.168.15.111:3376 --tlsverify --tlscert /home/conxadmin/agent-certs/cert.pem --tlskey /home/conxadmin/agent-certs/key.pem --tlscacert /home/conxadmin/agent-certs/ca.pem"
-docker ${OPTS} rm -v $(docker ${OPTS}  ps -a -q -f status=exited)
-docker-compose ${OPTS} pull
-docker-compose ${OPTS} up -d

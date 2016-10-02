@@ -23,7 +23,6 @@ public class CategoriesResource {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("categories")
 	public List<ProblemCategory> allCategories(@QueryParam("start") int start, @QueryParam("end") int end)
 			throws ApplicationException {
 		return problemService.findAllProblemCategories(start, end);
@@ -31,13 +30,13 @@ public class CategoriesResource {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("categories/count")
+	@Path("count")
 	public long countCategories() throws ApplicationException {
 		return problemService.countAllProblemCategories();
 	}
 
 	@GET
-	@Path("categories/{problemCategoryId}")
+	@Path("{problemCategoryId}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public ProblemCategory getProblemCategory(@PathParam("problemCategoryId") long problemCategoryId)
 			throws NoSuchModelException, ApplicationException {
@@ -45,14 +44,13 @@ public class CategoriesResource {
 	}
 
 	@PUT
-	@Path("categories")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void provideProblemCategory(ProblemCategory problemCategory) throws ApplicationException {
 		problemService.provideProblemCategory(problemCategory);
 	}
 
 	@DELETE
-	@Path("categories/{problemCategoryId}")
+	@Path("{problemCategoryId}")
 	public void deleteProbleCategory(@PathParam("problemCategoryId") long problemCategoryId)
 			throws NoSuchModelException, ApplicationException {
 		problemService.deleteProblemCategory(problemCategoryId);

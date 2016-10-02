@@ -14,15 +14,26 @@ import org.gauntlet.core.model.JPABaseEntity;
 @Table(name=Constants.CNX_TABLE_NAME_PREFIX+Constants.GNT_TABLE_NAME_SEPARATOR
 	+"problem_difficulty")
 public class JPAProblemDifficulty extends JPABaseEntity implements Serializable {
+	
+	private String color;
 
 	public JPAProblemDifficulty() {
 		super();
 	}
 
-	public JPAProblemDifficulty(String name, String code) {
+	public JPAProblemDifficulty(String name, String code, String color) {
 		this();
 		this.name = name;
 		this.code = code;
-	}	
+		this.color = color;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
 }
 

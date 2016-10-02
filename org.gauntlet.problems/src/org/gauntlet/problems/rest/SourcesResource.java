@@ -27,7 +27,6 @@ public class SourcesResource {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("sources")
 	public List<ProblemSource> allSources(@QueryParam("start") int start, @QueryParam("end") int end)
 			throws ApplicationException {
 		return problemService.findAllProblemSources(start, end);
@@ -35,13 +34,13 @@ public class SourcesResource {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("sources/count")
+	@Path("count")
 	public long countSources() throws ApplicationException {
 		return problemService.countAllProblemSources();
 	}
 
 	@GET
-	@Path("sources/{problemSourceId}")
+	@Path("{problemSourceId}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public ProblemSource getProblemSource(@PathParam("problemSourceId") long problemSourceId)
 			throws NoSuchModelException, ApplicationException {
@@ -49,31 +48,16 @@ public class SourcesResource {
 	}
 
 	@PUT
-	@Path("sources")
 	@Consumes(MediaType.APPLICATION_JSON)
-	public void provideProblemSource(ProblemSource problemSource) throws ApplicationException {
-		problemService.provideProblemSource(problemSource);
+	public ProblemSource provideProblemSource(ProblemSource problemSource) throws ApplicationException {
+		final ProblemSource newProblemSource = problemService.provideProblemSource(problemSource);
+		return newProblemSource;
 	}
 
 	@DELETE
-	@Path("sources/{problemSourceId}")
-	public void deleteProbleSource(@PathParam("problemSourceId") long problemSourceId)
+	@Path("{problemSourceId}")
+	public void deleteProblemSource(@PathParam("problemSourceId") long problemSourceId)
 			throws NoSuchModelException, ApplicationException {
 		problemService.deleteProblemSource(problemSourceId);
-	}
-
-	@GET
-	@Path("pictures/{pictureId}")
-	public Response getImage(@PathParam("pictureId") String pictureId) throws ApplicationException {
-		ProblemPicture pp;
-		try {
-			pp = problemService.getProblemPictureByPrimary(Long.valueOf(pictureId));
-			InputStream pictureStream = new ByteArrayInputStream(pp.getPicture());
-			MediaType mediaType = new MediaType("image", "png");
-
-			return Response.ok().type(mediaType).entity(pictureStream).build();
-		} catch (NumberFormatException | ApplicationException | NoSuchModelException e) {
-			throw new ApplicationException(e);
-		}
 	}
 }
