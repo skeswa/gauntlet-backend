@@ -8,6 +8,7 @@ import java.net.URL;
 import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -21,6 +22,8 @@ import org.junit.Test;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
 
+import com.google.api.services.sheets.v4.model.ValueRange;
+import com.google.api.client.auth.oauth2.*;
 import com.google.common.base.Stopwatch;
 
 public class GSheetsImporterTest extends BaseJPATest {
@@ -62,6 +65,26 @@ public class GSheetsImporterTest extends BaseJPATest {
 	@Test
 	public void testImportGSheet() throws Exception {
 		Assert.assertNotNull(sheetService);
+		
+		final String spreadsheetID = "1d5j5BxGbexL-qfdY4atuq39I6MFKYWFGTbPESSasRXE";
+		final String readRange = "Sheet 1!A2:L";
+		final ValueRange response = sheetService.getSheetsService().spreadsheets().values().get(spreadsheetID, readRange).execute();
+	    final List<List<Object>> values = response.getValues();
+	    
+	    for (List<Object> row : values) {
+			String sourceName = (String)row.get(1);
+			String pageNum = (String)row.get(3);
+			String typeName = (String)row.get(4);
+			String categoryName = (String)row.get(5);
+			String difficulty = (String)row.get(6);
+			String useCalculator = (String)row.get(7);
+			String questionIndex = (String)row.get(8);
+			String questionImgURL = (String)row.get(9);
+			String answerKey = (String)row.get(10);
+			String explainImgUrl = (String)row.get(11);
+			
+			System.out.println(String.format("%s %s %s", sourceName, pageNum, typeName));
+	    }
 	}	
 	
 }
