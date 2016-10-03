@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<repository increment="1475350719000" name="Local" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+<repository increment="1475503097000" name="Local" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="com.fasterxml.jackson.dataformat.jackson-dataformat-xml"/>
@@ -263,6 +263,143 @@
   </resource>
   <resource>
     <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.google.guava.jdk5"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="17.0.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="59bf456547b6dda3ced968cb56f7f2d3e14474e2de2960a32c47e31c1e456c61"/>
+      <attribute name="url" value="com.google.guava.jdk5/com.google.guava.jdk5-17.0.0.jar"/>
+      <attribute name="size" type="Long" value="2059438"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.google.common.net"/>
+      <attribute name="version" type="Version" value="17.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+      <directive name="uses" value="javax.annotation,com.google.common.base,com.google.common.hash,com.google.common.io,com.google.common.primitives,com.google.common.collect,com.google.common.escape"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.google.common.html"/>
+      <attribute name="version" type="Version" value="17.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+      <directive name="uses" value="com.google.common.escape,javax.annotation"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.google.common.collect"/>
+      <attribute name="version" type="Version" value="17.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+      <directive name="uses" value="com.google.common.base,javax.annotation,com.google.common.primitives,com.google.common.math"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.google.common.primitives"/>
+      <attribute name="version" type="Version" value="17.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+      <directive name="uses" value="com.google.common.base,javax.annotation,sun.misc"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.google.common.base"/>
+      <attribute name="version" type="Version" value="17.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+      <directive name="uses" value="javax.annotation"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.google.common.escape"/>
+      <attribute name="version" type="Version" value="17.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+      <directive name="uses" value="com.google.common.base,javax.annotation"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.google.common.cache"/>
+      <attribute name="version" type="Version" value="17.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+      <directive name="uses" value="com.google.common.collect,com.google.common.util.concurrent,javax.annotation,com.google.common.base,com.google.common.primitives,sun.misc"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.google.common.eventbus"/>
+      <attribute name="version" type="Version" value="17.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+      <directive name="uses" value="com.google.common.collect,com.google.common.cache,javax.annotation,com.google.common.base,com.google.common.util.concurrent,com.google.common.reflect"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.google.common.util.concurrent"/>
+      <attribute name="version" type="Version" value="17.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+      <directive name="uses" value="com.google.common.base,javax.annotation,com.google.common.collect,com.google.common.primitives,com.google.common.math"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.google.common.hash"/>
+      <attribute name="version" type="Version" value="17.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+      <directive name="uses" value="com.google.common.primitives,com.google.common.base,javax.annotation,com.google.common.math"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.google.common.io"/>
+      <attribute name="version" type="Version" value="17.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+      <directive name="uses" value="javax.annotation,com.google.common.base,com.google.common.math,com.google.common.hash,com.google.common.collect,com.google.common.primitives"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.google.common.xml"/>
+      <attribute name="version" type="Version" value="17.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+      <directive name="uses" value="com.google.common.escape,javax.annotation"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.google.common.reflect"/>
+      <attribute name="version" type="Version" value="17.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+      <directive name="uses" value="javax.annotation,com.google.common.base,com.google.common.collect,com.google.common.primitives"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.google.common.math"/>
+      <attribute name="version" type="Version" value="17.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+      <directive name="uses" value="com.google.common.base,com.google.common.primitives,javax.annotation"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.google.common.annotations"/>
+      <attribute name="version" type="Version" value="17.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.google.guava.jdk5"/>
+      <attribute name="bundle-version" type="Version" value="17.0.0"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.annotation)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.inject)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=sun.misc)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="com.google.guava"/>
       <attribute name="type" value="osgi.bundle"/>
       <attribute name="version" type="Version" value="19.0.0"/>
@@ -452,6 +589,228 @@
       <attribute name="bundle-symbolic-name" value="com.springsource.org.json"/>
       <attribute name="bundle-version" type="Version" value="1.0.0"/>
     </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="1e04153c19a246b3dd1678405791042bd38f3d0afca66112d7ae858173e16092"/>
+      <attribute name="url" value="com.springsource.org.mortbay.jetty/com.springsource.org.mortbay.jetty-6.1.9.jar"/>
+      <attribute name="size" type="Long" value="502006"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.io"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+      <directive name="uses" value="org.mortbay.util"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.io.bio"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+      <directive name="uses" value="org.mortbay.io"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.io.nio"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+      <directive name="uses" value="org.mortbay.component,org.mortbay.io,org.mortbay.thread"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.jetty"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http,org.mortbay.component,org.mortbay.io,org.mortbay.jetty.handler,org.mortbay.jetty.security,org.mortbay.jetty.servlet,org.mortbay.resource,org.mortbay.thread,org.mortbay.util,org.mortbay.util.ajax"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.jetty.bio"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+      <directive name="uses" value="org.mortbay.io,org.mortbay.io.bio,org.mortbay.jetty"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.jetty.deployer"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+      <directive name="uses" value="org.mortbay.component,org.mortbay.jetty,org.mortbay.jetty.handler,org.mortbay.resource,org.mortbay.util"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.jetty.handler"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http,org.mortbay.component,org.mortbay.jetty,org.mortbay.jetty.servlet,org.mortbay.log,org.mortbay.resource,org.mortbay.util"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.jetty.nio"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+      <directive name="uses" value="org.mortbay.io,org.mortbay.io.nio,org.mortbay.jetty,org.mortbay.thread,org.mortbay.util.ajax"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.jetty.security"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+      <directive name="uses" value="javax.net.ssl,javax.servlet,javax.servlet.http,org.mortbay.component,org.mortbay.io,org.mortbay.jetty,org.mortbay.jetty.bio,org.mortbay.jetty.handler,org.mortbay.log,org.mortbay.resource,org.mortbay.util"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.jetty.servlet"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http,org.mortbay.component,org.mortbay.io,org.mortbay.jetty,org.mortbay.jetty.handler,org.mortbay.jetty.security,org.mortbay.resource,org.mortbay.util"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.jetty.webapp"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http,org.mortbay.jetty,org.mortbay.jetty.handler,org.mortbay.jetty.security,org.mortbay.jetty.servlet,org.mortbay.resource,org.mortbay.xml"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.resource"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.servlet.jetty"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+      <directive name="uses" value="javax.servlet.http,org.mortbay.servlet"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.xml"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.jetty"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+      <directive name="uses" value="javax.xml.parsers,org.xml.sax,org.xml.sax.helpers"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.net.ssl)(version&gt;=0.0.0))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.security.cert)(version&gt;=0.0.0))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet)(version&gt;=2.5.0)(!(version&gt;=3.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet.http)(version&gt;=2.5.0)(!(version&gt;=3.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.xml.parsers)(version&gt;=0.0.0))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mortbay.component)(version&gt;=6.1.9)(!(version&gt;=7.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mortbay.log)(version&gt;=6.1.9)(!(version&gt;=7.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mortbay.servlet)(version&gt;=6.1.9)(!(version&gt;=7.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mortbay.thread)(version&gt;=6.1.9)(!(version&gt;=7.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mortbay.util)(version&gt;=6.1.9)(!(version&gt;=7.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mortbay.util.ajax)(version&gt;=6.1.9)(!(version&gt;=7.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.xml.sax)(version&gt;=0.0.0))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.xml.sax.helpers)(version&gt;=0.0.0))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.springsource.org.mortbay.util"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="66d92a63481ec45c2d6f4cd8ff1c114b65e794190a9d6fed91c446fa50cb1921"/>
+      <attribute name="url" value="com.springsource.org.mortbay.util/com.springsource.org.mortbay.util-6.1.9.jar"/>
+      <attribute name="size" type="Long" value="161740"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.springsource.org.mortbay.util"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.springsource.org.mortbay.util"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.component"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.util"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.log"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.util"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.servlet"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.util"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http,org.mortbay.util"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.thread"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.util"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.util"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.util"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mortbay.util.ajax"/>
+      <attribute name="version" type="Version" value="6.1.9"/>
+      <attribute name="bundle-symbolic-name" value="com.springsource.org.mortbay.util"/>
+      <attribute name="bundle-version" type="Version" value="6.1.9"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet)(version&gt;=2.5.0)(!(version&gt;=3.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet.http)(version&gt;=2.5.0)(!(version&gt;=3.0.0)))"/>
+    </requirement>
   </resource>
   <resource>
     <capability namespace="osgi.identity">
