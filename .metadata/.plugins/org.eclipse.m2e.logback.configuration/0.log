@@ -367,3 +367,4 @@ org.apache.maven.artifact.InvalidArtifactRTException: For artifact {null:test:nu
 2016-10-02 19:55:44,858 [Worker-89] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
 2016-10-02 19:57:14,814 [Worker-85] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/mduduzikeswa/Documents/dev/mazasoft/java/gauntlet-backend/org.gauntlet.importer
 2016-10-02 19:57:14,815 [Worker-85] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2016-10-04 18:28:08,033 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

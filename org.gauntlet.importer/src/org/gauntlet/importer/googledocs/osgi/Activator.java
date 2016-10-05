@@ -4,6 +4,8 @@ import org.apache.felix.dm.DependencyActivatorBase;
 import org.apache.felix.dm.DependencyManager;
 import org.gauntlet.importer.googledocs.GSheetProblemsImporter;
 import org.gauntlet.importer.googledocs.IGSheetProblemsImporter;
+import org.gauntlet.importer.googledocs.problems.Importer;
+import org.gauntlet.problems.api.dao.IProblemDAOService;
 import org.osgi.framework.BundleContext;
 import org.osgi.service.log.LogService;
 
@@ -19,5 +21,17 @@ public class Activator extends DependencyActivatorBase {
 		dm.add(createComponent().setInterface(IGSheetProblemsImporter.class.getName(), null)
 				.setImplementation(GSheetProblemsImporter.class))
 		;
+		
+		
+		dm.add(createComponent()
+				.setInterface(Object.class.getName(), null)
+				.setImplementation(Importer.class)
+				.setCallbacks(null, "start", null, null)
+				.add(createServiceDependency().setService(IProblemDAOService.class)
+						.setRequired(true))
+				.add(createServiceDependency().setService(IGSheetProblemsImporter.class)
+						.setRequired(true))
+				.add(createServiceDependency().setService(LogService.class)
+						.setRequired(false)));
 	}
 }

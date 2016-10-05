@@ -128,4 +128,9 @@ public class Problem extends BaseEntity implements Serializable {
 		
 		this.code = source.getCode()+"_"+sourcePageNumber+"_"+sourceIndexWithinPage;
 	} 
+	
+	@Override
+	public String toString() {
+		return this.code;
+	}
 }

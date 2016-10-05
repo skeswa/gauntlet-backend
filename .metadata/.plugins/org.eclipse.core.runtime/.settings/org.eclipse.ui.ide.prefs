@@ -1,11 +1,10 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=c3c856da62e073183209eb210b26c103bfaaa0ea
 PROBLEMS_FILTERS_MIGRATE=true
 SHOW_LOCATION=true
 WORKSPACE_NAME=Gauntlet-BE
 eclipse.preferences.version=1
-<<<<<<< HEAD
-platformState=1462294483926
-=======
-platformState=1475348801620
->>>>>>> c3c856da62e073183209eb210b26c103bfaaa0ea
+platformState=1462294483928
 quickStart=false
 tipsAndTricks=true

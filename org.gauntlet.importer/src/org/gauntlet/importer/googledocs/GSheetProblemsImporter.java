@@ -10,15 +10,22 @@ import com.google.api.client.http.HttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.util.store.FileDataStoreFactory;
+
 import com.google.api.services.sheets.v4.SheetsScopes;
 import com.google.api.services.sheets.v4.model.*;
 import com.google.api.services.sheets.v4.Sheets;
+
+import com.google.api.services.drive.DriveScopes;
+import com.google.api.services.drive.model.*;
+import com.google.api.services.drive.Drive;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.List;
+
+import org.osgi.service.device.DriverSelector;
 
 public class GSheetProblemsImporter implements IGSheetProblemsImporter{
     /** Application name. */
@@ -45,7 +52,7 @@ public class GSheetProblemsImporter implements IGSheetProblemsImporter{
      * at ~/.credentials/sheets.googleapis.com-java-quickstart
      */
     private static final List<String> SCOPES =
-        Arrays.asList(SheetsScopes.SPREADSHEETS_READONLY);
+        Arrays.asList(SheetsScopes.SPREADSHEETS_READONLY, DriveScopes.DRIVE_READONLY);
 
     static {
         try {
@@ -95,6 +102,16 @@ public class GSheetProblemsImporter implements IGSheetProblemsImporter{
                 .setApplicationName(APPLICATION_NAME)
                 .build();
     }
+    
+    @Override
+    public Drive getDriveService() throws IOException {
+        Credential credential = authorize();
+        return new Drive.Builder(
+                HTTP_TRANSPORT, JSON_FACTORY, credential)
+                .setApplicationName(APPLICATION_NAME)
+                .build();
+    }
+    
 
     public static void main(String[] args) throws IOException {
         // Build a new authorized API client service.

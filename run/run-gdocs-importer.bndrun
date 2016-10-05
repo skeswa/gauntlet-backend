@@ -11,14 +11,12 @@
 
 -runvm: -ea -Dorg.slf4j.simpleLogger.defaultLogLevel=trace -Dorg.owasp.esapi.resources=load
 
--runbundles:  \
+-runbundles: \
 	osgi.core;version='[5,6)',\
 	osgi.cmpn;version='[4.3.1,5)',\
 	osgi.enterprise;version='[5,6)',\
-	,\
 	org.ops4j.pax.logging.pax-logging-api;version=1.7.0,\
 	org.ops4j.pax.logging.pax-logging-service;version=1.7.0,\
-	,\
 	org.apache.felix.gogo.runtime,\
 	org.apache.felix.gogo.shell,\
 	org.apache.felix.gogo.command,\
@@ -35,15 +33,13 @@
 	org.apache.commons.lang3;version=3.1.0,\
 	org.apache.commons.beanutils;version=1.8.3,\
 	com.springsource.org.json;version=1.0.0,\
-	org.apache.felix.dependencymanager;version='[3,4)',\
-	org.apache.felix.dependencymanager.runtime;version='[3,4)',\
 	org.apache.felix.dependencymanager;version='[4.1,5)',\
+	org.apache.felix.dependencymanager;version='[3,4)',\
 	org.apache.felix.dependencymanager.runtime;version='[4,5)',\
 	org.apache.felix.dependencymanager.shell;version='[4,5)',\
 	org.apache.felix.http.api;version='[2.3,2.4)',\
 	org.apache.felix.http.whiteboard;version='[2.3,2.4)',\
 	org.apache.felix.http.servlet-api;version='[1.1,1.2)',\
-	,\
 	com.fasterxml.jackson.core.jackson-annotations;version='[2.3,2.4)',\
 	com.fasterxml.jackson.core.jackson-databind;version='[2.3,2.4)',\
 	com.fasterxml.jackson.core.jackson-core;version='[2.3,2.4)',\
@@ -53,19 +49,15 @@
 	com.fasterxml.jackson.jaxrs.jackson-jaxrs-base;version='[2.3,2.4)',\
 	com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider;version='[2.3,2.4)',\
 	javax.ws.rs.jsr311-api;version=1.1.1,\
-	,\
 	com.google.guava;version='[18.0.0,20.0)',\
-	,\
 	org.amdatu.web.resourcehandler;version=1.0.3,\
 	org.amdatu.template;version=1.0.1,\
 	org.amdatu.web.rest.jaxrs;version=latest,\
-	org.amdatu.web.rest.wink;version="[2.0,3.0)",\
-	,\
+	org.amdatu.web.rest.wink;version='[2.0,3.0)',\
 	org.amdatu.multitenant;version='[1.0,1.1)',\
 	org.amdatu.multitenant.conf;version='[1.0,1.1)',\
 	org.amdatu.multitenant.factory;version='[1.0,1.1)',\
 	org.amdatu.multitenant.adapter;version='[1.0,1.1)',\
-	,\
 	net.sf.dozer.dozer-osgi;version=5.5.1,\
 	org.amdatu.persistence2_0;version='[1.0.1,1.1)',\
 	org.postgresql.jdbc41;version=9.4.0,\
@@ -82,27 +74,41 @@
 	org.amdatu.database.schemamigration;version='[2.0.1,2.1)',\
 	org.amdatu.jta.manager;version='[1.1.2,1.2)',\
 	org.amdatu.jta.transactionmanager;version='[1.0.2,1.1)',\
-	,\
 	org.amdatu.web.rest.doc;version=1.2.3,\
 	org.amdatu.web.rest.doc.swagger;version='[1.0.4,1.0.5)',\
 	org.amdatu.web.rest.doc.swagger.ui;version='[1.0.4,1.0.5)',\
+	,\
+	org.gauntlet.libraries.google-api-client;version=latest,\
+	org.gauntlet.libraries.google-api-services-sheets-v4-rev28;version=latest,\
+	org.gauntlet.libraries.google-oauth-client-jetty;version=latest,\
+	com.google.guava.jdk5;version=17.0,\
+	org.gauntlet.libraries.google-oauth-client;version=latest,\
+	org.gauntlet.libraries.google-http-client-jackson2;version=latest,\
+	org.apache.httpcomponents.httpclient;version=4.2,\
+	org.apache.httpcomponents.httpcore;version=4.2,\
+	org.gauntlet.libraries.google-http-client;version=latest,\
+	org.gauntlet.libraries.google-oauth-client-java6;version=latest,\
+	org.gauntlet.importer.gsheets;version=latest,\
+	com.springsource.org.apache.commons.logging;version=1.1.1,\
+	com.fasterxml.jackson.core.jackson-core;version=2.6.3,\
+	javax.servlet;version=2.5.0,\
+	com.springsource.org.mortbay.jetty;version=6.1.9,\
+	com.springsource.org.mortbay.util;version=6.1.9,\
+	org.gauntlet.libraries.google-api-services-drive-v3-rev44;version=latest,\
 	,\
 	org.gauntlet.core.api;version=latest,\
 	org.gauntlet.core.commons;version=latest,\
 	org.gauntlet.core.impl.dao;version=latest,\
 	org.gauntlet.core.impl.service;version=latest,\
 	org.gauntlet.core.model;version=latest,\
-	,\
 	org.gauntlet.problems.api;version=latest,\
 	org.gauntlet.problems.dao.impl.mt;version=latest,\
 	org.gauntlet.problems.model.persistence.openjpa.jpa2_0.mt;version=latest,\
-	org.gauntlet.problems.rest.mt;version=latest,\
-	org.gauntlet.problems.defaults.mt;version=latest,\
-	,\
+	org.gauntlet.data.defaults.mt;version=latest,\
 	org.gauntlet.quizzes.api;version=latest,\
 	org.gauntlet.quizzes.dao.impl.mt;version=latest,\
 	org.gauntlet.quizzes.model.persistence.openjpa.jpa2_0.mt;version=latest,\
-	org.gauntlet.quizzes.rest.mt;version=latest
+	org.gauntlet.importer.gsheets;version=latest
 ## Uncomment if you need to change the HTTP port
 #-runproperties: org.osgi.service.http.port=8080
 -runproperties:  \

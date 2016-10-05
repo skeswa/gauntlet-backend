@@ -28,7 +28,8 @@ junit: org.apache.servicemix.bundles.junit;version="[4.11,5)"
 	org.apache.httpcomponents.httpcore;version=4.2,\
 	org.gauntlet.libraries.google-http-client;version=latest,\
 	org.gauntlet.libraries.google-oauth-client-java6;version=latest,\
-	org.gauntlet.importer.gsheets;version=latest
+	org.gauntlet.importer.gsheets;version=latest,\
+	org.gauntlet.libraries.google-api-services-drive-v3-rev44;version=latest
 	
 -runbundles: \
 	osgi.core;version='[5,6)',\
@@ -51,4 +52,5 @@ junit: org.apache.servicemix.bundles.junit;version="[4.11,5)"
 	com.fasterxml.jackson.core.jackson-core;version=2.6.3,\
 	javax.servlet;version=2.5.0,\
 	com.springsource.org.mortbay.jetty;version=6.1.9,\
-	com.springsource.org.mortbay.util;version=6.1.9
+	com.springsource.org.mortbay.util;version=6.1.9,\
+	org.gauntlet.libraries.google-api-services-drive-v3-rev44;version=latest

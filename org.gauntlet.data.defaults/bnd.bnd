@@ -4,7 +4,17 @@
 	osgi.enterprise,\
 	org.apache.felix.dependencymanager;version=4.1,\
 	../cnf/plugins/org.apache.felix.dependencymanager.annotation-4.1.0.jar;version=file,\
-	org.amdatu.mongo,\
+	org.gauntlet.libraries.google-api-client;version=latest,\
+	org.gauntlet.libraries.google-api-services-sheets-v4-rev28;version=latest,\
+	org.gauntlet.libraries.google-oauth-client-jetty;version=latest,\
+	com.google.guava.jdk5;version=17.0,\
+	org.gauntlet.libraries.google-oauth-client;version=latest,\
+	org.gauntlet.libraries.google-http-client-jackson2;version=latest,\
+	org.apache.httpcomponents.httpclient;version=4.2,\
+	org.apache.httpcomponents.httpcore;version=4.2,\
+	org.gauntlet.libraries.google-http-client;version=latest,\
+	org.gauntlet.libraries.google-oauth-client-java6;version=latest,\
+	org.gauntlet.libraries.google-api-services-drive-v3-rev44;version=latest,\
 	jackson-core-asl,\
 	jackson-mapper-asl,\
 	javax.servlet,\
@@ -19,5 +29,6 @@
 	org.gauntlet.core.commons;version=latest,\
 	org.gauntlet.core.impl.service;version=latest,\
 	org.gauntlet.problems.api;version=latest,\
-	org.gauntlet.quizzes.api;version=latest
+	org.gauntlet.quizzes.api;version=latest,\
+	org.apache.commons.io;version=2.4
 -sub: *.bnd

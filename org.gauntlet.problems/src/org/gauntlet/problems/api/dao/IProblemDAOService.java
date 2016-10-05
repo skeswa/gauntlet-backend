@@ -29,6 +29,8 @@ public interface IProblemDAOService extends IBaseService {
 
 	public Problem getByName(String name) throws ApplicationException;
 	
+	public Problem getBySourceAndPageNumberAndIndex(Long srcId, Integer pageNumber, Integer indexInPage) throws ApplicationException;
+	
 	public List<Problem> findByDifficulty(Long difficultyId, int start, int end) throws ApplicationException;
 	
 	public int countByDifficulty(Long difficultyId) throws ApplicationException;
@@ -41,6 +43,8 @@ public interface IProblemDAOService extends IBaseService {
 	public ProblemDifficulty getProblemDifficultyByPrimary(Long pk)  throws ApplicationException, NoSuchModelException;
 	
 	public ProblemDifficulty provideProblemDifficulty(ProblemDifficulty record) throws ApplicationException;
+	
+	public ProblemDifficulty provideProblemDifficulty(String name) throws ApplicationException;
 	
 	public ProblemDifficulty getProblemDifficultyByCode(String code) throws ApplicationException;
 	
@@ -57,6 +61,8 @@ public interface IProblemDAOService extends IBaseService {
 	
 	public ProblemCategory provideProblemCategory(ProblemCategory record) throws ApplicationException;
 	
+	public ProblemCategory provideProblemCategory(String name) throws ApplicationException;
+	
 	public ProblemCategory getProblemCategoryByCode(String code) throws ApplicationException;
 	
 	public ProblemCategory getProblemCategoryByName(String name) throws ApplicationException;
@@ -71,6 +77,8 @@ public interface IProblemDAOService extends IBaseService {
 	public ProblemSource getProblemSourceByPrimary(Long pk)  throws ApplicationException, NoSuchModelException;
 	
 	public ProblemSource provideProblemSource(ProblemSource record) throws ApplicationException;
+	
+	public ProblemSource provideProblemSource(String name) throws ApplicationException;
 	
 	public ProblemSource getProblemSourceByCode(String code) throws ApplicationException;
 	

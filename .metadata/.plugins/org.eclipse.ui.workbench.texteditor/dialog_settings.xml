@@ -2,30 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="@QueryParam(&quot;end&quot;)" key="selection"/>
+		<item value="io" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="util"/>
+			<item value="io"/>
+			<item value="Category"/>
+			<item value="Difficulty"/>
+			<item value=":="/>
 			<item value="@PathParam(&quot;end&quot;)"/>
 			<item value="@PathParam(&quot;start&quot;)"/>
 			<item value="/{start}/{end}"/>
-			<item value="}"/>
-			<item value="${"/>
-			<item value="-jta-"/>
-			<item value="problems"/>
-			<item value="quizService"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Source"/>
+			<item value="Category"/>
+			<item value="="/>
 			<item value="@QueryParam(&quot;end&quot;)"/>
 			<item value="@QueryParam(&quot;start&quot;)"/>
 			<item value=""/>
 			<item value="-nonjta-"/>
 			<item value="quizTakeService"/>
-			<item value="QuizTake"/>
-			<item value="QuizType"/>
-			<item value="Quiz"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

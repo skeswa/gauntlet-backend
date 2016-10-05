@@ -125,6 +125,43 @@ public class ProblemDAOImpl extends BaseServiceImpl implements IProblemDAOServic
 		return JPAEntityUtil.copy(jpaEntity, Problem.class);
 	}
 	
+	@Override
+	public Problem getBySourceAndPageNumberAndIndex(Long srcId, Integer pageNumber, Integer indexInPage) throws ApplicationException {
+		Problem result = null;
+		try {
+			CriteriaBuilder builder = getEm().getCriteriaBuilder();
+			CriteriaQuery<JPAProblem> query = builder.createQuery(JPAProblem.class);
+			Root<JPAProblem> rootEntity = query.from(JPAProblem.class);
+			
+			Map<ParameterExpression,Object> pes = new HashMap<>();
+			
+			ParameterExpression<Long> pSrc = builder.parameter(Long.class);
+			pes.put(pSrc, srcId);
+			
+			ParameterExpression<Integer> pPage = builder.parameter(Integer.class);
+			pes.put(pPage, pageNumber);
+			
+			ParameterExpression<Integer> pIndexInPage = builder.parameter(Integer.class);
+			pes.put(pIndexInPage, indexInPage);
+			
+			query.select(rootEntity).where(builder.and(
+					builder.equal(rootEntity.get("source").get("id"),pSrc),
+					builder.equal(rootEntity.get("sourcePageNumber"),pageNumber),
+					builder.equal(rootEntity.get("sourceIndexWithinPage"),indexInPage)
+					));
+			query.select(rootEntity);
+			
+			
+			List resultList = findWithDynamicQueryAndParams(query,pes,0,1);
+			JPAProblem jpaEntity = (!resultList.isEmpty())?(JPAProblem)resultList.get(0):null;
+			result = JPAEntityUtil.copy(jpaEntity, Problem.class);
+		}
+		catch (Exception e) {
+			throw processException(e);
+		}
+		return result;		
+	}
+	
 	@Override 
 	public List<Problem> findByDifficulty(Long difficultyId, int start, int end) throws ApplicationException {
 		List<Problem> resultList = null;
@@ -215,6 +252,19 @@ public class ProblemDAOImpl extends BaseServiceImpl implements IProblemDAOServic
 		return existingCountry;	
 	}
 	
+	@Override
+	public ProblemDifficulty provideProblemDifficulty(String name) throws ApplicationException {
+		ProblemDifficulty existingCountry = getProblemDifficultyByCode(name);
+		if (Validator.isNull(existingCountry))
+		{
+			final ProblemSource record = new ProblemSource(name,name);
+			JPABaseEntity res = super.add(JPAEntityUtil.copy(record, JPAProblemDifficulty.class));
+			existingCountry = JPAEntityUtil.copy(res, ProblemDifficulty.class);
+		}
+
+		return existingCountry;			
+	}
+	
 	public ProblemDifficulty updateProblemDifficulty(JPAProblemDifficulty record) throws ApplicationException {
 		JPABaseEntity res = super.update(JPAEntityUtil.copy(record, JPAProblemDifficulty.class));
 		ProblemDifficulty dto = JPAEntityUtil.copy(res, ProblemDifficulty.class);
@@ -282,6 +332,20 @@ public class ProblemDAOImpl extends BaseServiceImpl implements IProblemDAOServic
 		return existingCountry;	
 	}
 	
+	@Override
+	public ProblemCategory provideProblemCategory(String name) throws ApplicationException {
+		ProblemCategory existingCountry = getProblemCategoryByCode(name);
+		if (Validator.isNull(existingCountry))
+		{
+			final ProblemSource record = new ProblemSource(name,name);
+			JPABaseEntity res = super.add(JPAEntityUtil.copy(record, JPAProblemCategory.class));
+			existingCountry = JPAEntityUtil.copy(res, ProblemCategory.class);
+		}
+
+		return existingCountry;			
+	}
+	
+	
 	public ProblemCategory updateProblemCategory(JPAProblemCategory record) throws ApplicationException {
 		JPABaseEntity res = super.update(JPAEntityUtil.copy(record, JPAProblemCategory.class));
 		ProblemCategory dto = JPAEntityUtil.copy(res, ProblemCategory.class);
@@ -346,6 +410,19 @@ public class ProblemDAOImpl extends BaseServiceImpl implements IProblemDAOServic
 		}
 
 		return existingCountry;	
+	}
+	
+	@Override
+	public ProblemSource provideProblemSource(String name) throws ApplicationException {
+		ProblemSource existingCountry = getProblemSourceByCode(name);
+		if (Validator.isNull(existingCountry))
+		{
+			final ProblemSource record = new ProblemSource(name,name);
+			JPABaseEntity res = super.add(JPAEntityUtil.copy(record, JPAProblemSource.class));
+			existingCountry = JPAEntityUtil.copy(res, ProblemSource.class);
+		}
+
+		return existingCountry;			
 	}
 	
 	public ProblemSource updateProblemSource(JPAProblemSource record) throws ApplicationException {
