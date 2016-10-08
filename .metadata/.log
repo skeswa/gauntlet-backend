@@ -8573,3 +8573,1031 @@ Binding(ALT+SHIFT+D N,
 
 !ENTRY net.resheim.eclipse.launcher.core 1 0 2016-10-05 08:47:32.135
 !MESSAGE Launching new Eclipse instance with "open -n /Applications/devtools/EclipseMars.app --args -vm /Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/bin/../jre/lib/server/libjvm.dylib -os macosx -ws cocoa -arch x86_64 -showsplash -launcher /Applications/devtools/EclipseMars.app/Contents/MacOS/eclipse -name Eclipse --launcher.library /Applications/devtools/EclipseMars.app/Contents/MacOS//../Eclipse/plugins/org.eclipse.equinox.launcher.cocoa.macosx.x86_64_1.1.300.v20150602-1417/eclipse_1611.so -startup /Applications/devtools/EclipseMars.app/Contents/MacOS//../Eclipse/plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar --launcher.appendVmargs -product org.eclipse.epp.package.jee.product -keyring /Users/mduduzikeswa/.eclipse_keyring -showlocation -vmargs -Dosgi.requiredJavaVersion=1.7 -XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts -XX:MaxPermSize=384m -Xms384m -Xmx1024m -Xdock:icon=../Resources/Eclipse.icns -XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts -Djava.class.path=/Applications/devtools/EclipseMars.app/Contents/MacOS//../Eclipse/plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar "
+
+!ENTRY net.resheim.eclipse.launcher.core 1 0 2016-10-05 12:52:00.708
+!MESSAGE Launching new Eclipse instance with "open -n /Applications/devtools/EclipseMars.app --args -vm /Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/bin/../jre/lib/server/libjvm.dylib -os macosx -ws cocoa -arch x86_64 -showsplash -launcher /Applications/devtools/EclipseMars.app/Contents/MacOS/eclipse -name Eclipse --launcher.library /Applications/devtools/EclipseMars.app/Contents/MacOS//../Eclipse/plugins/org.eclipse.equinox.launcher.cocoa.macosx.x86_64_1.1.300.v20150602-1417/eclipse_1611.so -startup /Applications/devtools/EclipseMars.app/Contents/MacOS//../Eclipse/plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar --launcher.appendVmargs -product org.eclipse.epp.package.jee.product -keyring /Users/mduduzikeswa/.eclipse_keyring -showlocation -vmargs -Dosgi.requiredJavaVersion=1.7 -XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts -XX:MaxPermSize=384m -Xms384m -Xmx1024m -Xdock:icon=../Resources/Eclipse.icns -XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts -Djava.class.path=/Applications/devtools/EclipseMars.app/Contents/MacOS//../Eclipse/plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar "
+
+!ENTRY net.resheim.eclipse.launcher.core 1 0 2016-10-07 14:14:48.036
+!MESSAGE Launching new Eclipse instance with "open -n /Applications/devtools/EclipseMars.app --args -vm /Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/bin/../jre/lib/server/libjvm.dylib -os macosx -ws cocoa -arch x86_64 -showsplash -launcher /Applications/devtools/EclipseMars.app/Contents/MacOS/eclipse -name Eclipse --launcher.library /Applications/devtools/EclipseMars.app/Contents/MacOS//../Eclipse/plugins/org.eclipse.equinox.launcher.cocoa.macosx.x86_64_1.1.300.v20150602-1417/eclipse_1611.so -startup /Applications/devtools/EclipseMars.app/Contents/MacOS//../Eclipse/plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar --launcher.appendVmargs -product org.eclipse.epp.package.jee.product -keyring /Users/mduduzikeswa/.eclipse_keyring -showlocation -vmargs -Dosgi.requiredJavaVersion=1.7 -XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts -XX:MaxPermSize=384m -Xms384m -Xmx1024m -Xdock:icon=../Resources/Eclipse.icns -XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts -Djava.class.path=/Applications/devtools/EclipseMars.app/Contents/MacOS//../Eclipse/plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar "
+!SESSION 2016-10-08 18:14:25.766 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -keyring /Users/mduduzikeswa/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -keyring /Users/mduduzikeswa/.eclipse_keyring -showlocation -data /Users/mduduzikeswa/Documents/dev/mazasoft/java/gauntlet-backend
+
+!ENTRY com.liferay.ide.alloy.core 4 0 2016-10-08 18:14:26.640
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.alloy.core [30]
+  Unresolved requirement: Require-Bundle: org.eclipse.a.wst.html.webresources.core; bundle-version="0.7.0"; resolution:="optional"
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+    -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.core [46]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.alloy.ui 4 0 2016-10-08 18:14:26.810
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.alloy.ui [31]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.xml.search.ui
+    -> Bundle-SymbolicName: com.liferay.ide.xml.search.ui; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.xml.search.ui [58]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+              com.liferay.ide.project.core [46]
+                No resolution report for the bundle.         Unresolved requirement: Require-Bundle: com.liferay.ide.portlet.core
+           -> Bundle-SymbolicName: com.liferay.ide.portlet.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+              com.liferay.ide.portlet.core [42]
+                Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+                  -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Unresolved requirement: Require-Bundle: com.liferay.ide.alloy.core; bundle-version="2.0.0"
+    -> Bundle-SymbolicName: com.liferay.ide.alloy.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.alloy.core [30]
+         Unresolved requirement: Require-Bundle: org.eclipse.a.wst.html.webresources.core; bundle-version="0.7.0"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.gradle.core 4 0 2016-10-08 18:14:26.935
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.gradle.core [34]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+    -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.core [46]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.gradle.ui 4 0 2016-10-08 18:14:27.145
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.gradle.ui [35]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.ui; bundle-version="3.0.0"
+    -> Bundle-SymbolicName: com.liferay.ide.project.ui; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.ui [47]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+              com.liferay.ide.project.core [46]
+                No resolution report for the bundle.  Unresolved requirement: Require-Bundle: com.liferay.ide.gradle.core
+    -> Bundle-SymbolicName: com.liferay.ide.gradle.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.gradle.core [34]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.hook.core 4 0 2016-10-08 18:14:27.238
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.hook.core [36]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+    -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.core [46]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.hook.ui 4 0 2016-10-08 18:14:27.430
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.hook.ui [37]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.ui
+    -> Bundle-SymbolicName: com.liferay.ide.project.ui; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.ui [47]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+              com.liferay.ide.project.core [46]
+                No resolution report for the bundle.  Unresolved requirement: Require-Bundle: com.liferay.ide.hook.core
+    -> Bundle-SymbolicName: com.liferay.ide.hook.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.hook.core [36]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.layouttpl.core 4 0 2016-10-08 18:14:27.558
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.layouttpl.core [38]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+    -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.core [46]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.layouttpl.ui 4 0 2016-10-08 18:14:27.776
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.layouttpl.ui [39]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.ui
+    -> Bundle-SymbolicName: com.liferay.ide.project.ui; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.ui [47]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+              com.liferay.ide.project.core [46]
+                No resolution report for the bundle.  Unresolved requirement: Require-Bundle: com.liferay.ide.layouttpl.core
+    -> Bundle-SymbolicName: com.liferay.ide.layouttpl.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.layouttpl.core [38]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.maven.core 4 0 2016-10-08 18:14:27.993
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.maven.core [40]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.theme.core; bundle-version="2.0.0"
+    -> Bundle-SymbolicName: com.liferay.ide.theme.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.theme.core [55]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+              com.liferay.ide.project.core [46]
+                No resolution report for the bundle.  Unresolved requirement: Require-Bundle: com.liferay.ide.layouttpl.core; bundle-version="2.0.0"
+    -> Bundle-SymbolicName: com.liferay.ide.layouttpl.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.layouttpl.core [38]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Unresolved requirement: Require-Bundle: com.liferay.ide.hook.core
+    -> Bundle-SymbolicName: com.liferay.ide.hook.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.hook.core [36]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.maven.ui 4 0 2016-10-08 18:14:28.257
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.maven.ui [41]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.maven.core; bundle-version="2.0.0"
+    -> Bundle-SymbolicName: com.liferay.ide.maven.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.maven.core [40]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.theme.core; bundle-version="2.0.0"
+           -> Bundle-SymbolicName: com.liferay.ide.theme.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+              com.liferay.ide.theme.core [55]
+                Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+                  -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+                     com.liferay.ide.project.core [46]
+                       No resolution report for the bundle.         Unresolved requirement: Require-Bundle: com.liferay.ide.layouttpl.core; bundle-version="2.0.0"
+           -> Bundle-SymbolicName: com.liferay.ide.layouttpl.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+              com.liferay.ide.layouttpl.core [38]
+                Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+                  -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+         Unresolved requirement: Require-Bundle: com.liferay.ide.hook.core
+           -> Bundle-SymbolicName: com.liferay.ide.hook.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+              com.liferay.ide.hook.core [36]
+                Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+                  -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.ui; bundle-version="2.0.0"
+    -> Bundle-SymbolicName: com.liferay.ide.project.ui; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.ui [47]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.portlet.core 4 0 2016-10-08 18:14:28.357
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.portlet.core [42]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+    -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.core [46]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.portlet.ui 4 0 2016-10-08 18:14:28.506
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.portlet.ui [43]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.portlet.core; visibility:="reexport"
+    -> Bundle-SymbolicName: com.liferay.ide.portlet.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.portlet.core [42]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+              com.liferay.ide.project.core [46]
+                No resolution report for the bundle.  Unresolved requirement: Require-Bundle: com.liferay.ide.project.ui; visibility:="reexport"
+    -> Bundle-SymbolicName: com.liferay.ide.project.ui; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.ui [47]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+    -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.portlet.vaadin.core 4 0 2016-10-08 18:14:28.637
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.portlet.vaadin.core [44]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.portlet.core
+    -> Bundle-SymbolicName: com.liferay.ide.portlet.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.portlet.core [42]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+              com.liferay.ide.project.core [46]
+                No resolution report for the bundle.  Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+    -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.portlet.vaadin.ui 4 0 2016-10-08 18:14:28.745
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.portlet.vaadin.ui [45]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.portlet.core
+    -> Bundle-SymbolicName: com.liferay.ide.portlet.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.portlet.core [42]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+              com.liferay.ide.project.core [46]
+                No resolution report for the bundle.  Unresolved requirement: Require-Bundle: com.liferay.ide.portlet.vaadin.core
+    -> Bundle-SymbolicName: com.liferay.ide.portlet.vaadin.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.portlet.vaadin.core [44]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.portlet.core
+           -> Bundle-SymbolicName: com.liferay.ide.portlet.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+    -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Unresolved requirement: Require-Bundle: com.liferay.ide.portlet.ui
+    -> Bundle-SymbolicName: com.liferay.ide.portlet.ui; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.portlet.ui [43]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.portlet.core; visibility:="reexport"
+           -> Bundle-SymbolicName: com.liferay.ide.portlet.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.ui; visibility:="reexport"
+           -> Bundle-SymbolicName: com.liferay.ide.project.ui; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+              com.liferay.ide.project.ui [47]
+                Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+                  -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.project.core 4 0 2016-10-08 18:14:28.801
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.project.core [46]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.project.ui 4 0 2016-10-08 18:14:28.937
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.project.ui [47]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+    -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.core [46]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.server.tomcat.core 4 0 2016-10-08 18:14:28.994
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.server.tomcat.core [50]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+    -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.core [46]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.server.tomcat.ui 4 0 2016-10-08 18:14:29.129
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.server.tomcat.ui [51]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.server.ui; visibility:="reexport"
+    -> Bundle-SymbolicName: com.liferay.ide.server.ui; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.server.ui [52]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+              com.liferay.ide.project.core [46]
+                No resolution report for the bundle.  Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+    -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.ui; visibility:="reexport"
+    -> Bundle-SymbolicName: com.liferay.ide.project.ui; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.ui [47]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Unresolved requirement: Require-Bundle: com.liferay.ide.server.tomcat.core; visibility:="reexport"
+    -> Bundle-SymbolicName: com.liferay.ide.server.tomcat.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.server.tomcat.core [50]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.server.ui 4 0 2016-10-08 18:14:29.227
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.server.ui [52]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+    -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.core [46]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.service.core 4 0 2016-10-08 18:14:29.293
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.service.core [53]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+    -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.core [46]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.service.ui 4 0 2016-10-08 18:14:29.418
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.service.ui [54]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.ui
+    -> Bundle-SymbolicName: com.liferay.ide.project.ui; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.ui [47]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+              com.liferay.ide.project.core [46]
+                No resolution report for the bundle.  Unresolved requirement: Require-Bundle: com.liferay.ide.service.core
+    -> Bundle-SymbolicName: com.liferay.ide.service.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.service.core [53]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+    -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.theme.core 4 0 2016-10-08 18:14:29.487
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.theme.core [55]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.core; visibility:="reexport"
+    -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.core [46]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.liferay.ide.xml.search.ui 4 0 2016-10-08 18:14:29.590
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.liferay.ide.xml.search.ui [58]
+  Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+    -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.project.core [46]
+         No resolution report for the bundle.  Unresolved requirement: Require-Bundle: com.liferay.ide.portlet.core
+    -> Bundle-SymbolicName: com.liferay.ide.portlet.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+       com.liferay.ide.portlet.core [42]
+         Unresolved requirement: Require-Bundle: com.liferay.ide.project.core
+           -> Bundle-SymbolicName: com.liferay.ide.project.core; bundle-version="3.0.0.201604280251-ga1"; singleton:="true"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"] because it is exposed to package 'aQute.bnd.annotation.plugin' from resources biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"] and biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"] via two dependency chains.
+
+Chain 1:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.bndlib)
+     |
+    provide: osgi.wiring.bundle: biz.aQute.bndlib
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.2.0.201605172007"]
+
+Chain 2:
+  com.liferay.ide.project.core [osgi.identity; osgi.identity="com.liferay.ide.project.core"; type="osgi.bundle"; version:Version="3.0.0.201604280251-ga1"; singleton:="true"]
+    require: (osgi.wiring.bundle=biz.aQute.repository)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="3.2.0.201605172008"; osgi.wiring.bundle="biz.aQute.repository"
+  biz.aQute.repository [osgi.identity; osgi.identity="biz.aQute.repository"; type="osgi.bundle"; version:Version="3.2.0.201605172008"]
+    import: (&(osgi.wiring.package=aQute.bnd.annotation.plugin)(&(version>=1.0.0)(!(version>=2.0.0))))
+     |
+    export: osgi.wiring.package: aQute.bnd.annotation.plugin
+  biz.aQute.bndlib [osgi.identity; osgi.identity="biz.aQute.bndlib"; type="osgi.bundle"; version:Version="3.1.0.201512181341"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.jface 2 0 2016-10-08 18:14:35.060
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-10-08 18:14:35.060
+!MESSAGE A conflict occurred for ALT+SHIFT+X N:
+Binding(ALT+SHIFT+X N,
+	ParameterizedCommand(Command(bnd.launch.runShortcut.run,Run Bnd Native Launcher,
+		Run Bnd Native Launcher,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3338d29d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X N,
+	ParameterizedCommand(Command(org.testng.eclipse.shortcut.run,Run TestNG Test,
+		Run TestNG Test,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5e1e19af,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-10-08 18:14:35.060
+!MESSAGE A conflict occurred for ALT+SHIFT+D N:
+Binding(ALT+SHIFT+D N,
+	ParameterizedCommand(Command(bnd.launch.runShortcut.debug,Debug Bnd Native Launcher,
+		Debug Bnd Native Launcher,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3792fed8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D N,
+	ParameterizedCommand(Command(org.testng.eclipse.shortcut.debug,Debug TestNG Test,
+		Debug TestNG Test,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@35d145fb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.core.net 1 0 2016-10-08 18:14:35.592
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2016-10-08 18:14:39.719
+!MESSAGE starting IvyDE plugin
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2016-10-08 18:14:39.738
+!MESSAGE IvyDE plugin started

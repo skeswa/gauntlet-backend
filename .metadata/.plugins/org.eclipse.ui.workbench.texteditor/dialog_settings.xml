@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="io" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="#"/>
 			<item value="util"/>
 			<item value="io"/>
 			<item value="Category"/>
@@ -15,15 +16,14 @@
 			<item value=":="/>
 			<item value="@PathParam(&quot;end&quot;)"/>
 			<item value="@PathParam(&quot;start&quot;)"/>
-			<item value="/{start}/{end}"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
 			<item value="Source"/>
 			<item value="Category"/>
 			<item value="="/>
 			<item value="@QueryParam(&quot;end&quot;)"/>
 			<item value="@QueryParam(&quot;start&quot;)"/>
-			<item value=""/>
 			<item value="-nonjta-"/>
 			<item value="quizTakeService"/>
 		</list>

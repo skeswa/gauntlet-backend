@@ -1,2 +1,2 @@
-commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\n<messages>\n<message>fixed cnf </message>\n<message>ci</message>\n<message>changed REST paths</message>\n<message>added docker compose</message>\n<message>almost</message>\n</messages>
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\n<messages>\n<message>ci</message>\n<message>added gsheets problem importer</message>\n<message>fixed cnf </message>\n<message>changed REST paths</message>\n<message>added docker compose</message>\n<message>almost</message>\n</messages>
 eclipse.preferences.version=1

@@ -18,4 +18,5 @@
 <fullyQualifiedTypeName name="org.gauntlet.problems.defaults.gdocs.Importer"/>
 <fullyQualifiedTypeName name="org.gauntlet.importer.googledocs.IGSheetProblemsImporter"/>
 <fullyQualifiedTypeName name="org.gauntlet.importer.googledocs.problems.Importer"/>
+<fullyQualifiedTypeName name="org.gauntlet.problems.model.jpa.JPAProblem"/>
 </qualifiedTypeNameHistroy>
