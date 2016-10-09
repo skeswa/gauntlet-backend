@@ -25,7 +25,6 @@ INDEX VERSION 1.127+/Users/mduduzikeswa/Documents/dev/mazasoft/java/gauntlet-bac
 3678403560.index
 2279540567.index
 114283300.index
-759500765.index
 4108731023.index
 694268040.index
 3850763839.index

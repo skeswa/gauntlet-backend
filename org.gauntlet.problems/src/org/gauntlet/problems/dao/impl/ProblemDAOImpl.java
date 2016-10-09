@@ -223,7 +223,8 @@ public class ProblemDAOImpl extends BaseServiceImpl implements IProblemDAOServic
 			Map<ParameterExpression,Object> pes = new HashMap<>();
 			pes.put(p, categoryId);
 			
-			resultList = findWithDynamicQueryAndParams(query,pes,start,end);
+			final List result = findWithDynamicQueryAndParams(query,pes,start,end);
+			resultList = JPAEntityUtil.copy(result, Problem.class);
 		}
 		catch (Exception e) {
 			throw processException(e);

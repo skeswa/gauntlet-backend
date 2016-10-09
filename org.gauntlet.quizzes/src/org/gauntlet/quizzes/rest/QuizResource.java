@@ -79,11 +79,11 @@ public class QuizResource {
     	return quizService.provide(quiz);
     }   
     
-    @GET
+    @POST
     @Path("generate") 
     @Consumes(MediaType.APPLICATION_JSON) 
     @Produces(MediaType.APPLICATION_JSON) 
-    public Quiz provide(QuizGenerationParameters params) throws IOException, ApplicationException, NoSuchModelException { 
+    public Quiz generate(QuizGenerationParameters params) throws IOException, ApplicationException, NoSuchModelException { 
     	return quizGeneratorManagerService.generate(params);
     }  
 

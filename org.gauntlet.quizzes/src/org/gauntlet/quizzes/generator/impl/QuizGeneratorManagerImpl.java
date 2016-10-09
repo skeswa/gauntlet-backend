@@ -23,7 +23,7 @@ public class QuizGeneratorManagerImpl implements IQuizGeneratorManagerService {
     private Map<String, ServiceReference> references = new HashMap<String, ServiceReference>();
 	
 	protected void addGenerator(final ServiceReference ref) {
-		final String type = ctx.getProperty(Constants.GENERATOR_TYPE_PARAM);
+		final String type = (String) ref.getProperty(Constants.GENERATOR_TYPE_PARAM);
 		references.put(type, ref);
 	}
 	
