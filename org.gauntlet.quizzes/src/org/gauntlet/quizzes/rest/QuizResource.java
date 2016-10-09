@@ -17,6 +17,8 @@ import org.gauntlet.core.api.dao.NoSuchModelException;
 import org.gauntlet.quizzes.api.dao.IQuizDAOService;
 import org.gauntlet.quizzes.api.model.Quiz;
 import org.gauntlet.quizzes.api.model.QuizType;
+import org.gauntlet.quizzes.generator.api.IQuizGeneratorManagerService;
+import org.gauntlet.quizzes.generator.api.model.QuizGenerationParameters;
 import org.osgi.service.log.LogService;
 
 
@@ -24,6 +26,7 @@ import org.osgi.service.log.LogService;
 public class QuizResource {
 	private volatile LogService logger;
 	private volatile IQuizDAOService quizService;
+	private volatile IQuizGeneratorManagerService quizGeneratorManagerService;
 	
 	/**
 	 * 
@@ -74,7 +77,15 @@ public class QuizResource {
     	QuizType qt = quizService.getQuizTypeByPrimary(typeId);
     	quiz.setQuizType(qt);
     	return quizService.provide(quiz);
-    }     
+    }   
+    
+    @GET
+    @Path("generate") 
+    @Consumes(MediaType.APPLICATION_JSON) 
+    @Produces(MediaType.APPLICATION_JSON) 
+    public Quiz provide(QuizGenerationParameters params) throws IOException, ApplicationException, NoSuchModelException { 
+    	return quizGeneratorManagerService.generate(params);
+    }  
 
 	/**
 	 * 

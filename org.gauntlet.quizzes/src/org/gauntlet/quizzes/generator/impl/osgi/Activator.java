@@ -2,13 +2,12 @@ package org.gauntlet.quizzes.generator.impl.osgi;
 
 import java.util.Properties;
 
-import javax.persistence.EntityManager;
-
 import org.apache.felix.dm.Component;
 import org.apache.felix.dm.DependencyActivatorBase;
 import org.apache.felix.dm.DependencyManager;
 import org.gauntlet.problems.api.dao.IProblemDAOService;
 import org.gauntlet.quizzes.generator.api.Constants;
+import org.gauntlet.quizzes.generator.api.IQuizGeneratorManagerService;
 import org.gauntlet.quizzes.generator.api.IQuizGeneratorService;
 import org.gauntlet.quizzes.generator.defaults.impl.ByProblemCategoryGeneratorImpl;
 import org.gauntlet.quizzes.generator.impl.QuizGeneratorManagerImpl;
@@ -24,9 +23,8 @@ public class Activator extends DependencyActivatorBase {
 
 	@Override
 	public void init(BundleContext arg0, DependencyManager dm) throws Exception {
-		dm.add(createComponent().setInterface(IQuizGeneratorService.class.getName(), null)
+		dm.add(createComponent().setInterface(IQuizGeneratorManagerService.class.getName(), null)
 				.setImplementation(QuizGeneratorManagerImpl.class)
-				.add(createServiceDependency().setService(EntityManager.class).setRequired(true))
 				.add(createServiceDependency().setService(IQuizGeneratorService.class)
 						.setCallbacks("addGenerator", "removeGenerator")
 						.setRequired(false))

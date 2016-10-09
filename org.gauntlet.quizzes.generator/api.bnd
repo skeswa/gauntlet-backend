@@ -1,4 +1,0 @@
-Export-Package: \
-	org.gauntlet.quizzes.generator.api.model,\
-	org.gauntlet.quizzes.generator.api
-Bundle-Version: 1.0.0.${tstamp}

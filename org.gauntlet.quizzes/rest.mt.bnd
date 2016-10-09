@@ -1,4 +1,4 @@
 Bundle-Activator: org.gauntlet.quizzes.rest.osgi.Activator
 Private-Package: \
-	org.gauntlet.quizzes.generator.rest,\
-	org.gauntlet.quizzes.rest.osgi
+	org.gauntlet.quizzes.rest.osgi,\
+	org.gauntlet.quizzes.rest
