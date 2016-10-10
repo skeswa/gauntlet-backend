@@ -369,3 +369,98 @@ org.apache.maven.artifact.InvalidArtifactRTException: For artifact {null:test:nu
 2016-10-02 19:57:14,815 [Worker-85] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
 2016-10-04 18:28:08,033 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2016-10-08 18:14:41,266 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2016-10-08 19:05:08,863 [main] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-08 19:05:08,870 [main] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-08 19:05:08,871 [main] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/dependencies/index.xml.gz
+2016-10-08 19:05:08,872 [main] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/dependencies/index.xml.gz
+2016-10-08 19:05:09,555 [main] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="3c067-b477-534b0020f5140", code=200, modified=Tue Jun 07 09:17:17 EDT 2016, url=http://repository.amdatu.org/dependencies/index.xml.gz, state=UPDATED]
+2016-10-08 19:05:09,769 [main] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-08 19:05:09,769 [main] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-08 19:05:09,769 [main] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/snapshot/index.xml.gz
+2016-10-08 19:05:09,770 [main] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/snapshot/index.xml.gz
+2016-10-08 19:05:09,861 [main] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="3421b-4851-4ff672ba83180", code=200, modified=Wed Jul 30 07:08:06 EDT 2014, url=http://repository.amdatu.org/snapshot/index.xml.gz, state=UPDATED]
+2016-10-08 19:05:09,880 [ModalContext] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-08 19:05:09,880 [ModalContext] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-08 19:05:09,881 [ModalContext] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/release/index.xml.gz
+2016-10-08 19:05:09,881 [ModalContext] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/release/index.xml.gz
+2016-10-08 19:05:09,975 [ModalContext] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="eb36b-b32a-53b5a24f9cf40", code=200, modified=Wed Aug 31 04:47:17 EDT 2016, url=http://repository.amdatu.org/release/index.xml.gz, state=UPDATED]
+2016-10-08 19:05:10,131 [ModalContext] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-08 19:05:10,132 [ModalContext] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-08 19:05:10,132 [ModalContext] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/dependencies/org.apache.felix.dependencymanager/org.apache.felix.dependencymanager-4.0.1.jar
+2016-10-08 19:05:10,132 [ModalContext] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/dependencies/org.apache.felix.dependencymanager/org.apache.felix.dependencymanager-4.0.1.jar
+2016-10-08 19:05:10,644 [ModalContext] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="4016b-35d31-5122eeb5ba280", code=200, modified=Thu Mar 26 07:00:10 EDT 2015, url=http://repository.amdatu.org/dependencies/org.apache.felix.dependencymanager/org.apache.felix.dependencymanager-4.0.1.jar, state=UPDATED]
+2016-10-08 19:05:11,041 [ModalContext] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-08 19:05:11,041 [ModalContext] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-08 19:05:11,041 [ModalContext] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/dependencies/osgi.annotation/osgi.annotation-6.0.1.jar
+2016-10-08 19:05:11,041 [ModalContext] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/dependencies/osgi.annotation/osgi.annotation-6.0.1.jar
+2016-10-08 19:05:11,159 [ModalContext] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="76050-3998-5346e35f74e00", code=200, modified=Sat Jun 04 02:47:20 EDT 2016, url=http://repository.amdatu.org/dependencies/osgi.annotation/osgi.annotation-6.0.1.jar, state=UPDATED]
+2016-10-08 19:05:11,175 [ModalContext] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-08 19:05:11,175 [ModalContext] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-08 19:05:11,176 [ModalContext] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/dependencies/org.apache.httpcomponents.httpclient/org.apache.httpcomponents.httpclient-4.2.3.jar
+2016-10-08 19:05:11,176 [ModalContext] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/dependencies/org.apache.httpcomponents.httpclient/org.apache.httpcomponents.httpclient-4.2.3.jar
+2016-10-08 19:05:11,334 [ModalContext] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="4218a-c8972-4d6296185bb40", code=200, modified=Wed Feb 20 10:12:05 EST 2013, url=http://repository.amdatu.org/dependencies/org.apache.httpcomponents.httpclient/org.apache.httpcomponents.httpclient-4.2.3.jar, state=UPDATED]
+2016-10-08 19:05:11,732 [ModalContext] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-08 19:05:11,732 [ModalContext] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-08 19:05:11,733 [ModalContext] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/dependencies/org.apache.httpcomponents.httpcore/org.apache.httpcomponents.httpcore-4.2.3.jar
+2016-10-08 19:05:11,733 [ModalContext] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/dependencies/org.apache.httpcomponents.httpcore/org.apache.httpcomponents.httpcore-4.2.3.jar
+2016-10-08 19:05:11,829 [ModalContext] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="4218c-7e593-4d6296185bb40", code=200, modified=Wed Feb 20 10:12:05 EST 2013, url=http://repository.amdatu.org/dependencies/org.apache.httpcomponents.httpcore/org.apache.httpcomponents.httpcore-4.2.3.jar, state=UPDATED]
+2016-10-08 19:05:12,462 [ModalContext] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-08 19:05:12,462 [ModalContext] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-08 19:05:12,463 [ModalContext] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/release/org.amdatu.testing.configurator/org.amdatu.testing.configurator-4.0.0.jar
+2016-10-08 19:05:12,463 [ModalContext] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/release/org.amdatu.testing.configurator/org.amdatu.testing.configurator-4.0.0.jar
+2016-10-08 19:05:12,717 [ModalContext] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="8c035-8c4f-53030ebab7880", code=200, modified=Mon Apr 11 03:59:14 EDT 2016, url=http://repository.amdatu.org/release/org.amdatu.testing.configurator/org.amdatu.testing.configurator-4.0.0.jar, state=UPDATED]
+2016-10-08 19:05:12,724 [ModalContext] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-08 19:05:12,724 [ModalContext] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-08 19:05:12,725 [ModalContext] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/dependencies/org.apache.servicemix.bundles.junit/org.apache.servicemix.bundles.junit-4.12.0.jar
+2016-10-08 19:05:12,725 [ModalContext] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/dependencies/org.apache.servicemix.bundles.junit/org.apache.servicemix.bundles.junit-4.12.0.jar
+2016-10-08 19:05:13,019 [ModalContext] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="41b9a-5a31a-523f403f60340", code=200, modified=Sat Nov 07 09:17:09 EST 2015, url=http://repository.amdatu.org/dependencies/org.apache.servicemix.bundles.junit/org.apache.servicemix.bundles.junit-4.12.0.jar, state=UPDATED]
+2016-10-08 19:05:14,374 [main] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-08 19:05:14,375 [main] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-08 19:05:14,375 [main] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/dependencies/index.xml.gz
+2016-10-08 19:05:14,375 [main] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/dependencies/index.xml.gz
+2016-10-08 19:05:14,467 [main] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="3c067-b477-534b0020f5140", code=200, modified=Tue Jun 07 09:17:17 EDT 2016, url=http://repository.amdatu.org/dependencies/index.xml.gz, state=UPDATED]
+2016-10-08 19:05:14,582 [main] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-08 19:05:14,582 [main] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-08 19:05:14,582 [main] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/snapshot/index.xml.gz
+2016-10-08 19:05:14,582 [main] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/snapshot/index.xml.gz
+2016-10-08 19:05:14,674 [main] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="3421b-4851-4ff672ba83180", code=200, modified=Wed Jul 30 07:08:06 EDT 2014, url=http://repository.amdatu.org/snapshot/index.xml.gz, state=UPDATED]
+2016-10-08 19:52:58,152 [Worker-41] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-08 19:52:58,152 [Worker-41] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-08 19:52:58,152 [Worker-41] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/dependencies/com.springsource.org.apache.commons.logging/com.springsource.org.apache.commons.logging-1.1.1.jar
+2016-10-08 19:52:58,152 [Worker-41] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/dependencies/com.springsource.org.apache.commons.logging/com.springsource.org.apache.commons.logging-1.1.1.jar
+2016-10-08 19:52:58,610 [Worker-41] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="42192-f018-4d629a8edc2c0", code=200, modified=Wed Feb 20 10:32:03 EST 2013, url=http://repository.amdatu.org/dependencies/com.springsource.org.apache.commons.logging/com.springsource.org.apache.commons.logging-1.1.1.jar, state=UPDATED]
+2016-10-08 19:52:58,802 [Worker-41] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-08 19:52:58,802 [Worker-41] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-08 19:52:58,803 [Worker-41] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/dependencies/com.fasterxml.jackson.core.jackson-core/jackson-core-2.6.3.jar
+2016-10-08 19:52:58,803 [Worker-41] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/dependencies/com.fasterxml.jackson.core.jackson-core/jackson-core-2.6.3.jar
+2016-10-08 19:52:58,898 [Worker-41] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="4a032-3f33b-525311e16f700", code=200, modified=Mon Nov 23 03:36:12 EST 2015, url=http://repository.amdatu.org/dependencies/com.fasterxml.jackson.core.jackson-core/jackson-core-2.6.3.jar, state=UPDATED]
+2016-10-10 13:15:13,818 [Worker-1] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-10 13:15:13,827 [Worker-1] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-10 13:15:13,827 [Worker-1] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/dependencies/index.xml.gz
+2016-10-10 13:15:13,839 [Worker-1] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/dependencies/index.xml.gz
+2016-10-10 13:15:14,166 [Worker-1] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="3c067-b477-534b0020f5140", code=200, modified=Tue Jun 07 09:17:17 EDT 2016, url=http://repository.amdatu.org/dependencies/index.xml.gz, state=UPDATED]
+2016-10-10 13:15:14,391 [Worker-1] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-10 13:15:14,391 [Worker-1] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-10 13:15:14,391 [Worker-1] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/snapshot/index.xml.gz
+2016-10-10 13:15:14,392 [Worker-1] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/snapshot/index.xml.gz
+2016-10-10 13:15:14,472 [Worker-1] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="3421b-4851-4ff672ba83180", code=200, modified=Wed Jul 30 07:08:06 EDT 2014, url=http://repository.amdatu.org/snapshot/index.xml.gz, state=UPDATED]
+2016-10-10 13:15:14,492 [Worker-1] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-10 13:15:14,492 [Worker-1] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-10 13:15:14,492 [Worker-1] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/release/index.xml.gz
+2016-10-10 13:15:14,493 [Worker-1] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/release/index.xml.gz
+2016-10-10 13:15:14,574 [Worker-1] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="eb36b-b32a-53b5a24f9cf40", code=200, modified=Wed Aug 31 04:47:17 EDT 2016, url=http://repository.amdatu.org/release/index.xml.gz, state=UPDATED]
+2016-10-10 13:15:15,576 [Worker-1] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-10 13:15:15,576 [Worker-1] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-10 13:15:15,577 [Worker-1] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/dependencies/index.xml.gz
+2016-10-10 13:15:15,577 [Worker-1] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/dependencies/index.xml.gz
+2016-10-10 13:15:15,659 [Worker-1] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="3c067-b477-534b0020f5140", code=200, modified=Tue Jun 07 09:17:17 EDT 2016, url=http://repository.amdatu.org/dependencies/index.xml.gz, state=UPDATED]
+2016-10-10 13:15:15,759 [Worker-1] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-10 13:15:15,759 [Worker-1] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-10 13:15:15,759 [Worker-1] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/snapshot/index.xml.gz
+2016-10-10 13:15:15,760 [Worker-1] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/snapshot/index.xml.gz
+2016-10-10 13:15:15,841 [Worker-1] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="3421b-4851-4ff672ba83180", code=200, modified=Wed Jul 30 07:08:06 EDT 2014, url=http://repository.amdatu.org/snapshot/index.xml.gz, state=UPDATED]
+2016-10-10 13:15:15,850 [Worker-1] INFO  aQute.bnd.http.HttpClient - Proxy handlers []
+2016-10-10 13:15:15,851 [Worker-1] INFO  aQute.bnd.http.HttpClient - URL Connection handlers []
+2016-10-10 13:15:15,851 [Worker-1] INFO  a.bnd.build.LoggingProgressPlugin - Download http://repository.amdatu.org/release/index.xml.gz
+2016-10-10 13:15:15,851 [Worker-1] INFO  aQute.bnd.http.HttpClient - GET http://repository.amdatu.org/release/index.xml.gz
+2016-10-10 13:15:15,931 [Worker-1] INFO  aQute.bnd.http.HttpClient - result TaggedData [tag="eb36b-b32a-53b5a24f9cf40", code=200, modified=Wed Aug 31 04:47:17 EDT 2016, url=http://repository.amdatu.org/release/index.xml.gz, state=UPDATED]

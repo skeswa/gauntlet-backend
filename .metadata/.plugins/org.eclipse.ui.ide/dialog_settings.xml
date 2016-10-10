@@ -12,6 +12,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/skeswa/dev/repos/gauntlet-backend"/>
 			<item value="/Users/mduduzikeswa/Documents/dev/mazasoft/java/gauntlet-backend"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">

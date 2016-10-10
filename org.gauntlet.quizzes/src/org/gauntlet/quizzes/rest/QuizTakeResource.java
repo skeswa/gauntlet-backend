@@ -6,9 +6,11 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.gauntlet.core.api.ApplicationException;
@@ -22,7 +24,7 @@ import org.gauntlet.quizzes.api.model.QuizType;
 import org.osgi.service.log.LogService;
 
 
-@Path("quiztakes")
+@Path("quizzes/attempts")
 public class QuizTakeResource {
 	private volatile LogService logger;
 	private volatile IQuizTakeDAOService quizTakeService;
@@ -34,10 +36,10 @@ public class QuizTakeResource {
 	 */
 	@GET
     @Produces(MediaType.APPLICATION_JSON)
-	@Path("all/{start}/{end}")
-    public List<QuizTake> all(@PathParam("start") int start, @PathParam("end") int end) throws ApplicationException {
+	@Path("/")
+    public List<QuizTake> all(@QueryParam("start") int start, @QueryParam("end") int end) throws ApplicationException {
 		return quizTakeService.findAll(start, end);
-    }	
+    }
 	
     @GET 
     @Path("{quizTakeId}") 
@@ -59,8 +61,8 @@ public class QuizTakeResource {
 	}
 	
     
-    @POST 
-    @Path("add") 
+    @PUT 
+    @Path("/") 
     @Consumes(MediaType.APPLICATION_JSON) 
     @Produces(MediaType.APPLICATION_JSON) 
     public QuizTake add(QuizTake quizTake) throws IOException, ApplicationException, NoSuchModelException { 
@@ -68,7 +70,7 @@ public class QuizTakeResource {
     	Quiz q = quizService.getByPrimary(typeId);
     	quizTake.setQuiz(q);
     	return quizTakeService.add(quizTake);
-    }     
+    }
 
 	/**
 	 * 
@@ -80,7 +82,7 @@ public class QuizTakeResource {
 	@Path("answers/add/{quizTakeId}")
     public QuizTake addAnswers(@PathParam("quizTakeId") long quizTakeId, List<QuizProblemAnswer> answers) throws ApplicationException, NoSuchModelException {
 		return quizTakeService.addAnswers(quizTakeId, answers);
-    }	
+    }
 	
 	@GET
     @Produces(MediaType.APPLICATION_JSON)
