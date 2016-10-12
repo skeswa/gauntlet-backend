@@ -1,8 +1,0 @@
-package org.gauntlet.problems.rest;
-
-import javax.ws.rs.Path;
-
-@Path("difficulties")
-public class DifficultiesResource {
-
-}
