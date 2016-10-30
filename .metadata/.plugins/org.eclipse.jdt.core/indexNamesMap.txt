@@ -1,3 +1,0 @@
-INDEX VERSION 1.127
-platform:/plugin/bndtools.builder/org/bndtools/builder/classpath/empty.index
-/org.gauntlet.core/generated/org.gauntlet.core.commons.jar

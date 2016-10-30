@@ -48,7 +48,9 @@
     	<!-- Quiz -->
     	<class>org.gauntlet.quizzes.model.jpa.JPAQuiz</class>
    		<class>org.gauntlet.quizzes.model.jpa.JPAQuizProblem</class>  
+   		<class>org.gauntlet.quizzes.model.jpa.JPAQuizAnswer</class>  
    		<class>org.gauntlet.quizzes.model.jpa.JPAQuizType</class>
+   		<class>org.gauntlet.quizzes.model.jpa.JPAQuizTake</class>
    		
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
 		<properties>  

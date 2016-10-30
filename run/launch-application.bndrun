@@ -101,6 +101,7 @@
 	,\
 	org.gauntlet.quizzes.api;version=latest,\
 	org.gauntlet.quizzes.dao.impl.mt;version=latest,\
+	org.gauntlet.quizzes.generator.impl.mt;version=latest,\
 	org.gauntlet.quizzes.model.persistence.openjpa.jpa2_0.mt;version=latest,\
 	org.gauntlet.quizzes.rest.mt;version=latest
 ## Uncomment if you need to change the HTTP port

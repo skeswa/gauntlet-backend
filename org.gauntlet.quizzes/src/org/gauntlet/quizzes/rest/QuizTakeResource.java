@@ -36,7 +36,6 @@ public class QuizTakeResource {
 	 */
 	@GET
     @Produces(MediaType.APPLICATION_JSON)
-	@Path("/")
     public List<QuizTake> all(@QueryParam("start") int start, @QueryParam("end") int end) throws ApplicationException {
 		return quizTakeService.findAll(start, end);
     }
